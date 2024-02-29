@@ -1,0 +1,44 @@
+<div class="navigation-menu" (click)="toggleMenu()">
+  <div class="bg-layers"> <span></span> <span></span> <span></span> <span></span> </div>
+  <!-- end bg-layers -->
+  <div class="inner" data-tilt data-tilt-perspective="500">
+    <div class="menu">
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/client-we-serve">Clients We Serve</a></li>
+        <li><a routerLink="/services">Our Services</a>
+          <ul>
+            <li><a routerLink="/services/quantitative-research">Quantitative Research</a></li>
+            <li><a routerLink="/services/qualitative-research">Qualitative Research</a></li>
+            <li><a routerLink="/services/b2b-research">B2B Research</a></li>
+            <li><a routerLink="/services/data-facts">Data Facts</a></li>
+            <li><a routerLink="/services/industries">Industries</a></li>
+            <li><a routerLink="/services/solutions">Solutions</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/about-us">About Us</a></li>
+        <li><a routerLink="/career">Careers</a></li>
+        <li><a href="#">Resource Center</a>
+          <ul>
+            <li><a routerLink="/blogs">Insights</a></li>
+            <li><a routerLink="/upcoming-events">Upcoming Events</a></li>
+            <li><a routerLink="/downloads">Downloadables (Reports)</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="left"> <a routerLink="/join-us">Join Panel</a> </div>
+  </div>
+</div>
+<!-- end navigation-menu -->
+
+<nav class="navbar">
+  <div class="logo"> <a routerLink="/"><img src="assets/images/logo.png" alt="Image"></a> </div>
+  <!-- end logo -->
+  <div class="right">
+    <div class="hamburger-menu"><b>MENU</b>
+      <div class="hamburger" id="hamburger-menu" (click)="toggleMenu()" style="cursor: pointer"> <span></span> <span></span> <span></span> </div>
+    </div>
+  </div>
+</nav>

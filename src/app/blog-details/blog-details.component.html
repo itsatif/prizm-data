@@ -1,0 +1,62 @@
+<header class="page-header">
+  <div class="inner-bg">
+    <img src="assets/images/contact-us.gif" alt="Image">
+  </div>
+  <div class="container">
+    <h1>Latest Blog</h1>
+  </div>
+  <div class="sound"><span> SOUND </span>
+    <div class="equalizer">
+      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<ng-container *ngIf="blog$ | async as blog">
+  <section class="news news-detail">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="post single-post wow fadeUp">
+            <figure class="post-image">
+              <img src="{{ blog.imageUrl }}" alt="Image">
+            </figure>
+            <div class="post-content">
+              <div class="inner">
+                <small class="post-date">{{ blog.date }}</small>
+                <h3 class="post-title"><a href="#">{{ blog.title }}</a></h3>
+                <ng-container *ngFor="let content of blog.content">
+                  <h4>{{ content.heading }}</h4>
+                  <p>{{ content.text }}</p>
+                  <div *ngIf="content.tip">Research Tip: {{ content.tip }}</div>
+                </ng-container>
+                <p>{{ blog.conclusion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="td-sidebar">
+            <div class="widget widget-recent-post">
+              <h4 class="widget-title">Recent Posts</h4>
+              <ul>
+                <!-- Assuming you have an array of recent posts -->
+                <li *ngFor="let recentPost of recentPosts">
+                  <div class="media">
+                    <div class="media-left">
+                      <img src="{{ recentPost.imageUrl }}" alt="blog">
+                    </div>
+                    <div class="media-body align-self-center">
+                      <h6 class="title"><a href="#">{{ recentPost.title }}</a></h6>
+                      <div class="post-info">{{ recentPost.date }}</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-container>
