@@ -935,6 +935,7 @@ section {
   justify-content: center;
   position: relative;
   background: #e6e6e6;
+  transform: scale(1);
 }
 
 .page-header .video-bg {
