@@ -1,4 +1,6 @@
-<header class="header">
+<header class="header" style="opacity: 1;
+    transition: all 0.05s ease-in-out 0s;
+    transform: scale(1);">
   <aside class="left-side">
     <ul>
       <li><a href="#">FACEBOOK</a></li>
@@ -9,19 +11,22 @@
   <!-- end left-side -->
   <div class="scroll-down"><small>SCROLL DOWN</small><span></span></div>
   <!-- end scroll-down -->
-  <div (click)="playOSSound()" class="sound">
+  <div (click)="playOSSound()" class="sound" style="cursor: pointer">
     <span>Sound</span>
-    <div class="equalizer">
+    <div class="equalizer" style="position: absolute;
+    bottom: 10px;
+    left: -17px;
+    cursor: pointer;">
       <span></span> <span></span> <span></span> <span></span>
     </div>
   </div>
   <!-- end sound -->
 
-  <div class="swiper-slider">
+  <div #swiper class="swiper-slider">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-speed="500" data-tilt-perspective="1500">
+      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
         <div class="video-bg">
-          <video muted autoplay loop playsinline>
+          <video autoplay loop muted playsinline>
             <source src="assets/videos/video0.mp4" type="video/mp4"/>
           </video>
           <div class="container">
@@ -34,20 +39,20 @@
             <div class="slide-btn"><a href="#">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                   y="0px"
-                   viewBox="0 0 104 104" enable-background="new 0 0 104 104" xml:space="preserve">
-                <circle class="video-play-circle" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="1"
-                        cx="52" cy="52" r="50"/>
+              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
+                   x="0px"
+                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
+                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
+                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
               </svg>
               <b>READ MORE</b> </a></div>
           </div>
         </div>
       </div>
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-speed="500" data-tilt-perspective="1500">
+      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
         <div class="video-bg">
-          <video muted autoplay loop playsinline>
+          <video autoplay loop muted playsinline>
             <source src="assets/videos/video01.mp4" type="video/mp4">
           </video>
           <div class="container">
@@ -60,20 +65,20 @@
             <div class="slide-btn"><a href="#">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                   y="0px"
-                   viewBox="0 0 104 104" enable-background="new 0 0 104 104" xml:space="preserve">
-                <circle class="video-play-circle" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="1"
-                        cx="52" cy="52" r="50"/>
+              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
+                   x="0px"
+                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
+                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
+                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
               </svg>
               <b>READ MORE</b> </a></div>
           </div>
         </div>
       </div>
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-speed="500" data-tilt-perspective="1500">
+      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
         <div class="video-bg">
-          <video src="assets/videos/video02.mp4" muted autoplay loop playsinline></video>
+          <video autoplay loop muted playsinline src="assets/videos/video02.mp4"></video>
           <div class="container">
             <div class="tagline"><span>04</span>
               <h6>Key Market Opportunities Revealed</h6>
@@ -84,11 +89,11 @@
             <div class="slide-btn"><a href="#">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                   y="0px"
-                   viewBox="0 0 104 104" enable-background="new 0 0 104 104" xml:space="preserve">
-                <circle class="video-play-circle" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="1"
-                        cx="52" cy="52" r="50"/>
+              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
+                   x="0px"
+                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
+                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
+                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
               </svg>
               <b>READ MORE</b> </a></div>
           </div>
@@ -123,7 +128,7 @@
         </p>
         <p>A fast-growing company in the <strong>Market Research</strong> industry providing innovative online solutions
           to global clients with strong skills and technology</p>
-        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-iteration="infinite" data-wow-duration="2s"><a
+        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
           href="#">
           <div class="lines"><span></span> <span></span></div>
           <!-- end lines -->
@@ -136,7 +141,7 @@
 
 <section class="services-content-block">
   <div class="video-bg">
-    <video src="assets/videos/video.mp4" muted loop autoplay playsinline></video>
+    <video autoplay loop muted playsinline src="assets/videos/video.mp4"></video>
   </div>
   <!-- end video-bg -->
   <div class="container">
@@ -224,7 +229,7 @@
 <!-- Why Us Section -->
 <section class="why-us">
   <div class="video-bg">
-    <video src="assets/videos/why-choose-v.mp4" muted loop autoplay playsinline></video>
+    <video autoplay loop muted playsinline src="assets/videos/why-choose-v.mp4"></video>
   </div>
   <div class="container">
     <div class="col-12 wow fadeIn">
@@ -238,7 +243,7 @@
           <span>01</span>
           <h4><a href="#">Quantitative Research</a></h4>
           <p> We use numbers and data to study and analyze trends, patterns, and relationships in a systematic way.</p>
-          <img src="assets/images/image-one.jpg" alt="">
+          <img alt="" src="assets/images/image-one.jpg">
         </div>
       </div>
       <!-- end col-4 -->
@@ -248,7 +253,7 @@
           <h4><a href="#">Qualitative Research</a></h4>
           <p>Explores people's thoughts, feelings, and behaviors through in-depth interviews, observations, and
             open-ended questions.</p>
-          <img src="assets/images/image-two.jpg" alt="">
+          <img alt="" src="assets/images/image-two.jpg">
         </div>
       </div>
       <!-- end col-4 -->
@@ -258,7 +263,7 @@
           <h4><a href="#">B2B Research</a></h4>
           <p>Focuses on understanding the needs, preferences, and behavior of businesses when making purchasing
             decisions.</p>
-          <img src="assets/images/image-three.jpg" alt="">
+          <img alt="" src="assets/images/image-three.jpg">
         </div>
       </div>
       <!-- end col-4 -->
@@ -268,7 +273,7 @@
           <h4><a href="#">India Data Facts</a></h4>
           <p> Offers essential and up-to-date information and statistics on demographics, economy, and culture, helping
             businesses make informed decisions in the Indian market.</p>
-          <img src="assets/images/image-four.jpg" alt="">
+          <img alt="" src="assets/images/image-four.jpg">
         </div>
       </div>
       <!-- end col-4 -->
@@ -278,7 +283,7 @@
           <h4><a href="#">Industries</a></h4>
           <p>Provides assistance in insights and analysis on various economic sectors, helping businesses understand
             market trends and make informed decisions.</p>
-          <img src="assets/images/image-five.jpg" alt="">
+          <img alt="" src="assets/images/image-five.jpg">
         </div>
       </div>
       <!-- end col-4 -->
@@ -288,7 +293,7 @@
           <h4><a href="#">Solutions</a></h4>
           <p>We offer practical answers and strategies to address business challenges, providing tailored solutions
             based on comprehensive market analysis.</p>
-          <img src="assets/images/image-six.jpg" alt="">
+          <img alt="" src="assets/images/image-six.jpg">
         </div>
       </div>
     </div>
@@ -306,8 +311,8 @@
       <!-- end col-12 -->
       <div class="col-12">
         <div class="project-box wow bounceInLeft" data-bg="#faf8ed" data-wow-delay="1s">
-          <figure><a href="assets/videos/feature-video.mp4" data-fancybox>
-            <video src="assets/videos/feature-video.mp4" muted autoplay loop playsinline></video>
+          <figure><a data-fancybox href="assets/videos/feature-video.mp4">
+            <video autoplay loop muted playsinline src="assets/videos/feature-video.mp4"></video>
           </a></figure>
           <div class="content-box">
             <div class="inner"><small>SIMPLE-TO-USE ANALYTICS TOOL</small>
@@ -317,8 +322,8 @@
         </div>
         <!-- end project-box -->
         <div class="project-box wow flipInX" data-bg="#ece6f4" data-wow-delay="1s">
-          <figure><a href="assets/videos/feature-video-1.mp4" data-fancybox>
-            <video src="assets/videos/feature-video-1.mp4" muted autoplay loop playsinline></video>
+          <figure><a data-fancybox href="assets/videos/feature-video-1.mp4">
+            <video autoplay loop muted playsinline src="assets/videos/feature-video-1.mp4"></video>
           </a></figure>
           <div class="content-box">
             <div class="inner"><small>ILLUSTRATE YOUR INSIGHTS WITH COMPELLING DATA VISUALIZATIONS</small>
@@ -328,8 +333,8 @@
         </div>
         <!-- end project-box -->
         <div class="project-box wow bounceInRight" data-bg="#ebf8f3" data-wow-delay="1s">
-          <figure><a href="assets/videos/feature-video-2.mp4" data-fancybox>
-            <video src="assets/videos/feature-video-2.mp4" muted autoplay loop playsinline></video>
+          <figure><a data-fancybox href="assets/videos/feature-video-2.mp4">
+            <video autoplay loop muted playsinline src="assets/videos/feature-video-2.mp4"></video>
           </a></figure>
           <div class="content-box">
             <div class="inner"><small>SHARE YOUR INSIGHTS WITH AUDIENCES OF YOUR CHOOSING</small>
@@ -341,7 +346,7 @@
       <!-- end col-12 -->
     </div>
     <!-- end row -->
-    <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-iteration="infinite" data-wow-duration="2s"><a
+    <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
       href="#">
       <div class="lines"><span></span> <span></span></div>
       <b>READ MORE</b></a>
@@ -352,7 +357,7 @@
 
 <section class="work-with-us">
   <div class="video-bg">
-    <video src="assets/videos/call-to-video.mp4" muted loop autoplay playsinline></video>
+    <video autoplay loop muted playsinline src="assets/videos/call-to-video.mp4"></video>
   </div>
   <div class="container">
     <div class="row">
@@ -363,25 +368,25 @@
       </div>
       <!-- end col-12 -->
       <div class="col-md-5 col-12 hello wow shake">
-        <form class="row inner" id="contact" name="contact" method="post" novalidate="novalidate">
+        <form class="row inner" id="contact" method="post" name="contact" novalidate="novalidate">
           <div class="form-group col-sm-6 col-12">
             <label><span>Name</span></label>
-            <input type="text" name="name" id="name" required="">
+            <input id="name" name="name" required="" type="text">
           </div>
           <div class="form-group col-sm-6 col-12">
             <label><span>Mobile No.</span></label>
-            <input type="text" name="phone" id="phone" required="">
+            <input id="phone" name="phone" required="" type="text">
           </div>
           <div class="form-group col-sm-12 col-12">
             <label><span>Email</span></label>
-            <input type="text" name="email" id="email" required="">
+            <input id="email" name="email" required="" type="text">
           </div>
           <div class="form-group col-12">
             <label><span>Message</span></label>
-            <textarea name="message" id="message" required=""></textarea>
+            <textarea id="message" name="message" required=""></textarea>
           </div>
           <div class="form-group col-12">
-            <button id="submit" type="submit" name="submit">SUBMIT</button>
+            <button id="submit" name="submit" type="submit">SUBMIT</button>
           </div>
           <!-- end form-group -->
         </form>
@@ -398,7 +403,7 @@
         <h6>START WORKING WITH US</h6>
         <h2>Our Clients</h2>
         <h4>Do you have a project opportunity, or are you just a looking to get creative solutions?</h4>
-        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-iteration="infinite" data-wow-duration="2s"><a
+        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
           href="#">
           <div class="lines"><span></span> <span></span></div>
           <!-- end lines -->
@@ -432,9 +437,9 @@
     <!-- end col-12 -->
     <ng-container *ngIf="blogs$ | async as blogsData">
       <div class="row retro-layout">
-        <div class="col-md-4 wow bounceInLeft" *ngFor="let blog of blogsData">
-          <a [href]="'/blogs/' + blog.slug" class="hentry img-1 gradient"
-             [style.background-image]="'url(' + blog.imageUrl + ')'">
+        <div *ngFor="let blog of blogsData" class="col-md-4 wow bounceInLeft">
+          <a [href]="'/blogs/' + blog.slug" [style.background-image]="'url(' + blog.imageUrl + ')'"
+             class="hentry img-1 gradient">
             <div class="text">
               <h2>{{ blog.title }}</h2>
               <span>{{ blog.date }}</span>
@@ -451,7 +456,7 @@
 
 <section class="testimonial-sec wow swing">
   <div class="video-bg">
-    <video src="assets/videos/testimonial-bg.mp4" muted loop autoplay playsinline></video>
+    <video autoplay loop muted playsinline src="assets/videos/testimonial-bg.mp4"></video>
   </div>
   <div class="container">
     <div class="col-12 wow fadeIn">
@@ -461,7 +466,7 @@
       <div class="testi-content swiper-wrapper">
         <!-- Check if reviews array exists and is not empty -->
         <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
-          <div class="slide swiper-slide" *ngFor="let review of reviews">
+          <div *ngFor="let review of reviews" class="slide swiper-slide">
             <p>{{ review.content }}</p>
             <img src="assets/images/left-quote.png"/>
             <div class="details">

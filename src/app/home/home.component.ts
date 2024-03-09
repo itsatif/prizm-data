@@ -1,24 +1,30 @@
-import {AfterViewInit, Component, Inject, OnInit, PLATFORM_ID, Renderer2} from '@angular/core';
-import {AsyncPipe, isPlatformBrowser, NgForOf, NgIf} from "@angular/common";
-import {Blogs, BlogsService} from "../blogs/blogs.service";
-import {Observable} from "rxjs";
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+import { AsyncPipe, isPlatformBrowser, NgForOf, NgIf } from '@angular/common';
+import { Blogs, BlogsService } from '../blogs/blogs.service';
+import { Observable } from 'rxjs';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    NgForOf,
-    NgIf,
-    AsyncPipe
-  ],
+  imports: [NgForOf, NgIf, AsyncPipe],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   blogs$: Observable<Blogs[]> = new Observable<Blogs[]>();
   isSoundOn: boolean = false;
   source: AudioBufferSourceNode | null = null;
-  reviews: any = []
+  reviews: any = [];
   barsHeight: number[][] = [
     [2, 13],
     [5, 22],
@@ -28,10 +34,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ];
   interval: any;
   duration: number = 5000;
+  @ViewChild('swiper', { static: false }) swiperContainer: ElementRef;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,
-              private renderer: Renderer2, @Inject(BlogsService) private blogsService: BlogsService) {
-  }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private renderer: Renderer2,
+    @Inject(BlogsService) private blogsService: BlogsService,
+  ) {}
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.blogs$;
@@ -41,13 +50,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       this.playOSSound();
       this.equalizerAnimation('.equalizer', 180, this.barsHeight);
+      this.initializeOwlCarousel();
+      const mySwiper: Swiper = new Swiper(this.swiperContainer?.nativeElement, {
+        // Swiper options here
+        // For example:
+        slidesPerView: 1,
+        spaceBetween: 30,
+      });
     }
   }
 
   equalizerAnimation(
     selector: string,
     speed: number,
-    barsHeight: number[][]
+    barsHeight: number[][],
   ): void {
     const equalizer = document.querySelector(selector);
     if (!equalizer) return;
@@ -122,5 +138,32 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.source.stop();
       }
     }
+  }
+
+  initializeOwlCarousel(): void {
+    const animatedEl: any = document.querySelectorAll('.swiper-wrapper');
+    const owlItem: any = document.querySelectorAll('.swiper-slide');
+    const screenSize: number =
+      window.innerWidth > 1440 ? 1440 : window.innerWidth;
+    const width: number = screenSize * 7;
+    const counterList: number[] = [0, 1, 2].map((it) => it * screenSize);
+    owlItem.forEach((item): void => {
+      if (item?.style) {
+        item.style.width = screenSize + 'px';
+      }
+    });
+    animatedEl.forEach((node): void => {
+      if (node?.style) {
+        let counterIndex: number = 0;
+        setInterval((): void => {
+          if (counterIndex < counterList.length) {
+            node.style.transform = `translate3d(-${counterList[counterIndex]}px, 0px, 0px)`;
+            counterIndex++;
+          } else {
+            counterIndex = 0;
+          }
+        }, 2000);
+      }
+    });
   }
 }

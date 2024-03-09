@@ -336,7 +336,7 @@ section {
 }
 
 .equalizer.paused span {
-  height: 1px !important;
+  height: 4px !important;
 }
 
 /* NAVIGATION MENU */
