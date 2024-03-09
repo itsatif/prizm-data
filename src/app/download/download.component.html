@@ -14,9 +14,9 @@
   </aside> -->
   <!-- end left-side -->
 
-  <div class="sound"> <span> SOUND </span>
+  <div class="sound"><span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
     </div>
   </div>
   <!-- end sound -->
@@ -26,44 +26,26 @@
 <section class="team">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-4 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
-        <figure>
-          <img src="assets/images/download-1.png" alt="Image">
-          <figcaption>
-            <h4>Complete Link Building Guide for Beginners</h4>
-            <div class="read-more">
-              <a href="#">Download Now</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
+      <ng-container *ngIf="downloadItems.length > 0; else noDataMessage">
+        <div class="col-lg-4 col-md-4 wow fadeIn" *ngFor="let item of downloadItems; let i = index"
+             [style.visibility]="'visible'" [style.animationName]="'fadeIn'" [style.animationDelay]="i * 0.05 + 's'">
+          <figure>
+            <img [src]="item.imageUrl" alt="Image">
+            <figcaption>
+              <h4>{{ item.title }}</h4>
+              <div class="read-more">
+                <a href="#">{{ item.buttonText }}</a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </ng-container>
+      <ng-template #noDataMessage>
+        <h3>We will shortly upload the data for downloading.</h3>
+      </ng-template>
       <!-- end col-4 -->
-      <div class="col-lg-4 col-md-4 wow fadeIn" data-wow-delay="0.05s" style="visibility: visible; animation-delay: 0.05s; animation-name: fadeIn;">
-        <figure>
-          <img src="assets/images/download-2.png" alt="Image">
-          <figcaption>
-            <h4>Complete Link Building Guide for Beginners</h4>
-            <div class="read-more">
-              <a href="#">Download Now</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-lg-4 col-md-4 wow fadeIn" data-wow-delay="0.10s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
-        <figure>
-          <img src="assets/images/download-3.png" alt="Image">
-          <figcaption>
-            <h4>Complete Link Building Guide for Beginners</h4>
-            <div class="read-more">
-              <a href="#">Download Now</a>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <!-- end col-4 -->
-
     </div>
+
     <!-- end row -->
   </div>
   <!-- end container -->

@@ -459,40 +459,25 @@
     </div>
     <div class="testimonial mySwiper">
       <div class="testi-content swiper-wrapper">
-        <div class="slide swiper-slide">
-          <p>“ I have been a keen observer of how the digital realm has been flourishing in our neighbour countries and
-            BD has some amazing progress over the years. I had previously made a list of the Digital Marketing agencies.
-            ”
-          </p>
-          <img src="assets/images/left-quote.png"/>
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
+        <!-- Check if reviews array exists and is not empty -->
+        <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
+          <div class="slide swiper-slide" *ngFor="let review of reviews">
+            <p>{{ review.content }}</p>
+            <img src="assets/images/left-quote.png"/>
+            <div class="details">
+              <span class="name">{{ review.name }}</span>
+            </div>
           </div>
-        </div>
-        <div class="slide swiper-slide">
-          <p>
-            “ I have been a keen observer of how the digital realm has been flourishing in our neighbour countries and
-            BD has some amazing progress over the years. I had previously made a list of the Digital Marketing agencies.
-            ”
-          </p>
-          <img src="assets/images/left-quote.png"/>
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
+        </ng-container>
+        <!-- Render "No Reviews Yet" if reviews array is empty -->
+        <ng-template #noReviews>
+          <div class="slide swiper-slide">
+            <h3>No Reviews Yet</h3>
           </div>
-        </div>
-        <div class="slide swiper-slide">
-          <p>
-            “ I have been a keen observer of how the digital realm has been flourishing in our neighbour countries and
-            BD has some amazing progress over the years. I had previously made a list of the Digital Marketing agencies.
-            ”
-          </p>
-          <img src="assets/images/left-quote.png"/>
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
-          </div>
-        </div>
+        </ng-template>
       </div>
       <div class="swiper-pagination"></div>
     </div>
+
   </div>
 </section>

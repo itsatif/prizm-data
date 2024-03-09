@@ -26,8 +26,16 @@
                 <small class="post-date">{{ blog.date }}</small>
                 <h3 class="post-title"><a href="#">{{ blog.title }}</a></h3>
                 <ng-container *ngFor="let content of blog.content">
-                  <h4>{{ content.heading }}</h4>
-                  <p>{{ content.text }}</p>
+                  <h4>{{ content?.heading }}</h4>
+                  <p *ngIf="content?.text">{{ content?.text }}</p>
+                  <ng-container *ngIf="content?.subsections">
+                    <ul>
+                      <li *ngFor="let subsection of content.subsections; trackBy: trackBySubsectionIndex">
+                        <h6 style="margin-bottom: 5px !important;">{{ subsection.title }}</h6>
+                        <p>{{ subsection.description }}</p>
+                      </li>
+                    </ul>
+                  </ng-container>
                   <div *ngIf="content.tip">Research Tip: {{ content.tip }}</div>
                 </ng-container>
                 <p>{{ blog.conclusion }}</p>
@@ -47,7 +55,7 @@
                       <img src="{{ recentPost.imageUrl }}" alt="blog">
                     </div>
                     <div class="media-body align-self-center">
-                      <h6 class="title"><a href="#">{{ recentPost.title }}</a></h6>
+                      <h6 class="title"><a [href]="'/blogs/' + recentPost.slug">{{ recentPost.title }}</a></h6>
                       <div class="post-info">{{ recentPost.date }}</div>
                     </div>
                   </div>

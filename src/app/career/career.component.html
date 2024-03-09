@@ -14,9 +14,9 @@
   </aside> -->
   <!-- end left-side -->
 
-  <div class="sound"> <span> SOUND </span>
+  <div class="sound"><span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
     </div>
   </div>
   <!-- end sound -->
@@ -37,43 +37,35 @@
     <div class="row justify-content-center">
       <div class="col-xl-10">
         <!-- single-job-content -->
-        <div class="single-job-items mb-30">
+        <div class="single-job-items mb-30"
+             [style.justify-content]="!(jobOpenings && jobOpenings.length > 0) ? 'center':''">
           <div class="job-items">
-
-            <div class="job-tittle">
-              <a href="#!"><h4>Digital Marketer</h4></a>
-              <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Location</li>
-              </ul>
-            </div>
+            <!-- Check if jobOpenings array exists and is not empty -->
+            <ng-container *ngIf="jobOpenings && jobOpenings.length > 0; else noJobOpenings">
+              <div class="job-tittle" *ngFor="let job of jobOpenings">
+                <a href="#!"><h4>{{ job.title }}</h4></a>
+                <ul>
+                  <li><i class="fas fa-map-marker-alt"></i> {{ job.location }}</li>
+                </ul>
+              </div>
+            </ng-container>
+            <!-- Render "No Job Openings" if jobOpenings array is empty -->
+            <ng-template #noJobOpenings>
+              <h3 style="text-align: center">No Job Openings</h3>
+            </ng-template>
           </div>
-          <div class="items-link f-right">
+
+          <div class="items-link f-right" *ngIf="jobOpenings && jobOpenings.length > 0">
             <a href="#career-form">Full Time</a>
           </div>
         </div>
-        <!-- single-job-content -->
-        <div class="single-job-items mb-30">
-          <div class="job-items">
-
-            <div class="job-tittle">
-              <a href="#!"><h4>Digital Marketer</h4></a>
-              <ul>
-                <li><i class="fas fa-map-marker-alt"></i> Location</li>
-              </ul>
-            </div>
-          </div>
-          <div class="items-link f-right">
-            <a href="#career-form">Full Time</a>
-          </div>
-        </div>
-        <!-- single-job-content -->
-
       </div>
     </div>
     <div class="hello">
       <div id="career-form" class="row d-flex justify-content-center align-items-center">
         <!-- end col-6 -->
-        <div class="col-lg-12 wow fadeIn" data-wow-delay="0.05s" style="visibility: visible; animation-delay: 0.05s; animation-name: fadeIn;">
+        <div class="col-lg-12 wow fadeIn" data-wow-delay="0.05s"
+             style="visibility: visible; animation-delay: 0.05s; animation-name: fadeIn;">
           <form class="row inner" id="contact" name="contact" method="post" novalidate="novalidate">
             <h2>Lets Connect with us !</h2>
             <div class="form-group col-sm-6 col-12">
@@ -98,7 +90,9 @@
             </div>
             <div class="form-group col-12">
               <label><span>Upload Resume</span></label>
-              <input type="file" name="file-880" size="40" class="form-control sdr-frs brow" accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv" aria-required="true" aria-invalid="false">
+              <input type="file" name="file-880" size="40" class="form-control sdr-frs brow"
+                     accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv"
+                     aria-required="true" aria-invalid="false">
             </div>
             <div class="form-group col-12">
               <button id="submit" type="submit" name="submit">SUBMIT</button>

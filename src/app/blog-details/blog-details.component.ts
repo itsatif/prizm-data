@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from "@angular/router";
 import {Blogs, BlogsService} from "../blogs/blogs.service";
 import {map, Observable, switchMap} from "rxjs";
-import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
+import {AsyncPipe, CommonModule, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-blog-details',
@@ -10,7 +10,8 @@ import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
   imports: [
     NgIf,
     AsyncPipe,
-    NgForOf
+    NgForOf,
+    CommonModule
   ],
   templateUrl: './blog-details.component.html',
   styleUrl: './blog-details.component.css'
@@ -35,5 +36,10 @@ export class BlogDetailsComponent implements OnInit {
         )
       )
     );
+  }
+
+  // TrackBy function for 'subsections' array
+  trackBySubsectionIndex(index: number, subsection: any): number {
+    return index;
   }
 }

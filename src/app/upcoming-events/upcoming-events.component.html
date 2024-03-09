@@ -5,80 +5,57 @@
   <div class="container">
     <h1>Upcoming Events</h1>
   </div>
-  <!-- <aside class="left-side">
-    <ul>
-      <li><a href="#">FACEBOOK</a></li>
-      <li><a href="#">INSTAGRAM</a></li>
-      <li><a href="#">YOUTUBE</a></li>
-    </ul>
-  </aside> -->
-  <!-- end left-side -->
-
-  <div class="sound"> <span> SOUND </span>
+  <div class="sound">
+    <span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+      <div class="holder">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
-  <!-- end sound -->
 </header>
-<!-- end header -->
 
-<section class="news news-detail">
+<section class="news news-detail" style="padding-top: 200px">
   <div class="container">
-    <div class="row">
+    <div class="row" [style.justify-content]="events.length > 0 ? '':'center'">
       <div class="col-8">
-        <div class="post single-post wow fadeUp">
-          <figure class="post-image">
-            <img src="assets/images/upcoming-event-single.jpg" alt="Image">
-          </figure>
-          <!-- end news-image -->
-          <div class="post-content">
-            <div class="inner"> <small class="post-date">28 DECEMBER, 2023</small>
-              <h3 class="post-title"><a href="#">Lorem Ipsum is simply dummy</a></h3>
-              <h6>Business is the activity of making one's living or making money by producing or buying and selling products (goods and services).Simply put, it is "any activity or enterprise entered into for profit. </h6>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-
-              <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-
+        <ng-container *ngIf="events.length > 0; else noEventsMessage">
+          <div class="post single-post wow fadeUp" *ngFor="let event of events; let i = index">
+            <figure class="post-image">
+              <img [src]="event.imageUrl" alt="Event Image">
+            </figure>
+            <div class="post-content">
+              <div class="inner">
+                <small class="post-date">{{ event.date }}</small>
+                <h3 class="post-title"><a href="#">{{ event.title }}</a></h3>
+                <h6>{{ event.description }}</h6>
+                <p>{{ event.details }}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </ng-container>
+        <ng-template #noEventsMessage>
+          <h3 style="text-align: center">No Upcoming Events</h3>
+        </ng-template>
       </div>
-      <div class="col-4">
+      <div class="col-4" *ngIf="!!recentPosts.length">
         <div class="td-sidebar">
           <div class="widget widget-recent-post">
             <h4 class="widget-title">Recent Post</h4>
             <ul>
-              <li>
+              <li *ngFor="let recentPost of recentPosts">
                 <div class="media">
                   <div class="media-left">
-                    <img src="assets/images/img-1.jpg" alt="blog">
+                    <img [src]="recentPost.imageUrl" alt="Recent Post Image">
                   </div>
                   <div class="media-body align-self-center">
-                    <h6 class="title"><a href="#">Social Media For Promote Business.</a></h6>
-                    <div class="post-info">15 October</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="media">
-                  <div class="media-left">
-                    <img src="assets/images/img-2.jpg" alt="blog">
-                  </div>
-                  <div class="media-body align-self-center">
-                    <h6 class="title"><a href="#">Marketing For Base market watch</a></h6>
-                    <div class="post-info">15 October</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="media">
-                  <div class="media-left">
-                    <img src="assets/images/img-3.jpg" alt="blog">
-                  </div>
-                  <div class="media-body align-self-center">
-                    <h6 class="title"><a href="#">Condtum Integer urna at faucibus</a></h6>
-                    <div class="post-info">15 October</div>
+                    <h6 class="title"><a href="#">{{ recentPost.title }}</a></h6>
+                    <div class="post-info">{{ recentPost.date }}</div>
                   </div>
                 </div>
               </li>

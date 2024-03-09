@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   blogs$: Observable<Blogs[]> = new Observable<Blogs[]>();
   isSoundOn: boolean = false;
   source: AudioBufferSourceNode | null = null;
+  reviews: any = []
   barsHeight: number[][] = [
     [2, 13],
     [5, 22],
