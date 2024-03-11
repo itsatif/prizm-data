@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NgForOf, NgIf } from '@angular/common';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Service, ServiceService } from '../services/service.service';
 
 @Component({
   selector: 'app-service-details',
   standalone: true,
-  imports: [],
+  imports: [NgForOf, NgIf],
   templateUrl: './service-details.component.html',
-  styleUrl: './service-details.component.css'
+  styleUrl: './service-details.component.css',
 })
-export class ServiceDetailsComponent {
+export class ServiceDetailsComponent implements OnInit {
+  contentData: Service | any = {};
 
+  constructor(
+    private route: ActivatedRoute,
+    private service: ServiceService,
+  ) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((param: Params): void => {
+      if (param?.['slug']) {
+        this.contentData = this.service.serviceDetails.find(
+          (service: Service): boolean => service.slug === param?.['slug'],
+        );
+      }
+    });
+  }
 }

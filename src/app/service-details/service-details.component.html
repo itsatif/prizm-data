@@ -5,9 +5,9 @@
   <div class="container">
     <h1>Service Detail</h1>
   </div>
-  <div class="sound"> <span> SOUND </span>
+  <div class="sound"><span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
     </div>
   </div>
   <!-- end sound -->
@@ -21,21 +21,19 @@
         <div class="service-details-wrap">
           <img src="assets/images/blog-1.jpg" alt="services" class="img-fluid rounded shadow-sm">
           <div class="services-detail-content mt-4">
-            <h4>We offer a complete range of customised research solutions</h4>
-
+            <h3>{{ contentData.title }}</h3>
+            <p>{{ contentData.description }}</p>
+            <h4>{{ contentData.subheading }}</h4>
+            <ng-container *ngIf="contentData?.subDescription">
+              <p>{{ contentData?.subDescription }}</p>
+            </ng-container>
             <ul class="list-unstyled tech-feature-list">
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Advertising Pre-Testing</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Ads Effectiveness Measurement Post Launch Both One-Off and Tracking</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Product Testing</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Concept Testing</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>New Product Research, Including Volume Estimation</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Customer Satisfaction Measurement</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Trade Satisfaction Measurement</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Employee Satisfaction Measurement</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Brand Health Measurement and Tracking</li>
-              <li class="py-1"><i aria-hidden="true" class="fa fa-check-square"></i>Package Testing</li>
+              <li class="py-1" *ngFor="let item of contentData.listItems">
+                <i aria-hidden="true" class="fa fa-check-square"></i>{{ item }}
+              </li>
             </ul>
           </div>
+
         </div>
       </div>
       <div class="col-lg-4 col-md-4">
@@ -47,12 +45,12 @@
               <h5>All Services</h5>
             </div>
             <ul class="all-service-list">
-              <li><a href="#">Quantitative Research</a></li>
-              <li><a href="#">Qualitative Research</a></li>
-              <li><a href="#">B2B Research</a></li>
-              <li><a href="#">Data Facts</a></li>
-              <li><a href="#">Industries</a></li>
-              <li><a href="#">Solutions</a></li>
+              <li><a href="/services/quantitative-research">Quantitative Research</a></li>
+              <li><a href="/services/qualitative-research">Qualitative Research</a></li>
+              <li><a href="/services/b2b-research">B2B Research</a></li>
+              <li><a href="/services/india-data-facts">Data Facts</a></li>
+              <li><a href="/services/industries">Industries</a></li>
+              <li><a href="/services/solutions">Solutions</a></li>
             </ul>
           </aside>
 
