@@ -36,7 +36,7 @@
             <!-- end tagline -->
             <h1>Market<br>
               <span>Planning</span></h1>
-            <div class="slide-btn"><a href="#">
+            <div class="slide-btn"><a href="/about-us">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
               <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
@@ -62,7 +62,7 @@
             <!-- end tagline -->
             <h1>Global<br>
               <span>Trends</span></h1>
-            <div class="slide-btn"><a href="#">
+            <div class="slide-btn"><a href="/about-us">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
               <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
@@ -86,7 +86,7 @@
             <!-- end tagline -->
             <h1>Targeting<br>
               <span>Growth</span></h1>
-            <div class="slide-btn"><a href="#">
+            <div class="slide-btn"><a href="/about-us">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
               <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
@@ -349,7 +349,7 @@
     </div>
     <!-- end row -->
     <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
-      href="/about-us">
+      href="/blogs">
       <div class="lines"><span></span> <span></span></div>
       <b>READ MORE</b></a>
     </div>
@@ -465,9 +465,9 @@
       <h2>Client Testimonials </h2>
     </div>
     <div class="testimonial mySwiper">
-      <div class="testi-content swiper-wrapper">
-        <!-- Check if reviews array exists and is not empty -->
-        <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
+      <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
+        <div class="testi-content swiper-wrapper">
+          <!-- Check if reviews array exists and is not empty -->
           <div *ngFor="let review of reviews" class="slide swiper-slide">
             <p>{{ review.content }}</p>
             <img src="assets/images/left-quote.png"/>
@@ -475,14 +475,12 @@
               <span class="name">{{ review.name }}</span>
             </div>
           </div>
-        </ng-container>
-        <!-- Render "No Reviews Yet" if reviews array is empty -->
-        <ng-template #noReviews>
-          <div class="slide swiper-slide">
-            <h3>No Reviews Yet</h3>
-          </div>
-        </ng-template>
-      </div>
+          <!-- Render "No Reviews Yet" if reviews array is empty -->
+        </div>
+      </ng-container>
+      <ng-template #noReviews>
+        <h3 style="text-align: center">No Reviews Yet</h3>
+      </ng-template>
       <div class="swiper-pagination"></div>
     </div>
 
