@@ -1,14 +1,12 @@
-import {Component} from '@angular/core';
-import {NgIf} from "@angular/common";
+import { Component } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-download',
   standalone: true,
-  imports: [
-    NgIf
-  ],
+  imports: [NgIf, CommonModule],
   templateUrl: './download.component.html',
-  styleUrl: './download.component.css'
+  styleUrl: './download.component.css',
 })
 export class DownloadComponent {
   // downloadItems = [
@@ -28,5 +26,5 @@ export class DownloadComponent {
   //     buttonText: 'Download Now'
   //   }
   // ];
-  downloadItems = []
+  downloadItems = [];
 }
