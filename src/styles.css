@@ -1517,6 +1517,7 @@ header .sound .equalizer .holder {
   display: flex;
   flex-wrap: wrap;
   padding-top: 240px;
+  padding-bottom: 50px;
   position: relative
 }
 
