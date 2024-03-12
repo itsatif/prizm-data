@@ -1,0 +1,10 @@
+@media (max-width: 480px) {
+  .copyright-cont {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .copyright-cont-next {
+    text-align: center !important;
+  }
+}

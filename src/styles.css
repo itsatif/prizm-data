@@ -1046,6 +1046,7 @@ header .scroll-down {
   left: 0;
   bottom: 0;
   z-index: 3;
+  cursor: pointer;
 }
 
 header .scroll-down small {
@@ -5086,7 +5087,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 
 p {
@@ -5384,7 +5385,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
   font-weight: 500 !important;
   line-height: 1.2 !important;
 }
@@ -5416,7 +5417,7 @@ h5 {
 
 .h6,
 h6 {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .lead {

@@ -61,22 +61,23 @@
       <!-- end col-6 -->
       <div class="col-lg-10 wow fadeIn" data-wow-delay="0.05s"
            style="visibility: visible; animation-delay: 0.05s; animation-name: fadeIn;">
-        <form class="row inner" id="contact" name="contact" method="post" novalidate="novalidate">
+        <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)" class="row inner" id="contact" name="contact"
+              method="post" novalidate="novalidate">
           <div class="form-group col-sm-6 col-12">
             <label><span>Name</span></label>
-            <input type="text" name="name" id="name" required="">
+            <input [(ngModel)]="formData.name" type="text" name="name" id="name" required="">
           </div>
           <div class="form-group col-sm-6 col-12">
             <label><span>Mobile No.</span></label>
-            <input type="text" name="phone" id="phone" required="">
+            <input [(ngModel)]="formData.phoneNumber" type="text" name="phone" id="phone" required="">
           </div>
           <div class="form-group col-sm-12 col-12">
             <label><span>Email</span></label>
-            <input type="text" name="email" id="email" required="">
+            <input [(ngModel)]="formData.email" type="text" name="email" id="email" required="">
           </div>
           <div class="form-group col-12">
             <label><span>Message</span></label>
-            <textarea name="message" id="message" required=""></textarea>
+            <textarea [(ngModel)]="formData.message" name="message" id="message" required=""></textarea>
           </div>
           <div class="form-group col-12">
             <button id="submit" type="submit" name="submit">SUBMIT</button>

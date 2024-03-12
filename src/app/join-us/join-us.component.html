@@ -14,9 +14,9 @@
   </aside> -->
   <!-- end left-side -->
 
-  <div class="sound"> <span> SOUND </span>
+  <div class="sound"><span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"> <span></span> <span></span> <span></span> <span></span><span></span><span></span> </div>
+      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
     </div>
   </div>
   <!-- end sound -->
@@ -27,97 +27,107 @@
     <div class="col-md-3 register-left">
       <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
       <h3>Welcome</h3>
-      <p>It is with great pleasure and enthusiasm that we extend a warm welcome to each of you as valued members of our distinguished Expert Panel on Market Research!</p>
+      <p>It is with great pleasure and enthusiasm that we extend a warm welcome to each of you as valued members of our
+        distinguished Expert Panel on Market Research!</p>
     </div>
     <div class="col-md-9 register-right">
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <h3 class="register-heading">Join our movement today!</h3>
-          <div class="row register-form">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="First Name *" value="" />
+          <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.fname" type="text" class="form-control" placeholder="First Name *"
+                         value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Last Name *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.lname" type="text" class="form-control" placeholder="Last Name *"
+                         value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Company Name *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.companyname" type="text" class="form-control"
+                         placeholder="Company Name *" value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Designation *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.designation" type="text" class="form-control" placeholder="Designation *"
+                         value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.email" type="email" class="form-control" placeholder="Email *" value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Date of birth *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.dob" type="password" class="form-control" placeholder="Date of birth *"
+                         value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <select class="form-control">
-                  <option class="hidden"  selected disabled>Gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                </select>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select class="form-control">
+                    <option class="hidden" selected disabled>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <select class="form-control">
-                  <option class="hidden"  selected disabled>Marital-Status</option>
-                  <option>Single</option>
-                  <option>Married</option>
-                  <option>Widowed</option>
-                  <option>Divorced</option>
-                  <option>Separated</option>
-                </select>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select class="form-control">
+                    <option class="hidden" selected disabled>Marital-Status</option>
+                    <option>Single</option>
+                    <option>Married</option>
+                    <option>Widowed</option>
+                    <option>Divorced</option>
+                    <option>Separated</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <select class="form-control">
-                  <option class="hidden"  selected disabled>Children</option>
-                  <option>0</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4+</option>
-                </select>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select class="form-control">
+                    <option class="hidden" selected disabled>Children</option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4+</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="USD 20,000 / GBP 20,000" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.currency" type="password" class="form-control"
+                         placeholder="USD 20,000 / GBP 20,000" value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Country *" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.country" type="password" class="form-control" placeholder="Country *"
+                         value=""/>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Zip Code" value="" />
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input [(ngModel)]="formData.zip" type="password" class="form-control" placeholder="Zip Code"
+                         value=""/>
+                </div>
               </div>
-            </div>
 
-            <input type="submit" class="btnRegister"  value="Send"/>
+              <input type="submit" class="btnRegister" value="Send"/>
 
-          </div>
-
+            </div>
+          </form>
         </div>
       </div>
     </div>

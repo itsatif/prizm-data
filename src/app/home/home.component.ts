@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private renderer: Renderer2,
     @Inject(BlogsService) private blogsService: BlogsService,
     private snackBar: MatSnackBar,
+    private el: ElementRef,
   ) {}
 
   ngOnInit(): void {
@@ -80,6 +81,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.playOSSound();
       this.equalizerAnimation('.equalizer', 180, this.barsHeight);
       this.initializeOwlCarousel();
+      this.playOSSound();
       const mySwiper: Swiper = new Swiper(this.swiperContainer?.nativeElement, {
         // Swiper options here
         // For example:
@@ -203,6 +205,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     } else {
       this.openSnackBar('Please fill in all the details in the form');
     }
+  }
+
+  scrollToBottom(): void {
+    this.el.nativeElement.ownerDocument.defaultView.scrollTo({
+      top: this.el.nativeElement?.offsetHeight,
+      behavior: 'smooth',
+    });
   }
 
   openSnackBar(message: string): void {
