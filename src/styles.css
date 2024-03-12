@@ -20413,3 +20413,6 @@ body.compensate-for-scrollbar {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
