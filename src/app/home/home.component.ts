@@ -8,19 +8,47 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { AsyncPipe, isPlatformBrowser, NgForOf, NgIf } from '@angular/common';
+import {
+  AsyncPipe,
+  CommonModule,
+  isPlatformBrowser,
+  NgForOf,
+  NgIf,
+} from '@angular/common';
 import { Blogs, BlogsService } from '../blogs/blogs.service';
 import { Observable } from 'rxjs';
 import Swiper from 'swiper';
+import {
+  MatSnackBar,
+  MatSnackBarConfig,
+  MatSnackBarModule,
+} from '@angular/material/snack-bar';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgForOf, NgIf, AsyncPipe],
+  imports: [
+    NgForOf,
+    NgIf,
+    AsyncPipe,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    FormsModule,
+    CommonModule,
+    MatButton,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  formData: any = {
+    name: '',
+    phoneNumber: '',
+    email: '',
+    message: '',
+  };
   blogs$: Observable<Blogs[]> = new Observable<Blogs[]>();
   isSoundOn: boolean = false;
   source: AudioBufferSourceNode | null = null;
@@ -40,6 +68,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     private renderer: Renderer2,
     @Inject(BlogsService) private blogsService: BlogsService,
+    private snackBar: MatSnackBar,
   ) {}
 
   ngOnInit(): void {
@@ -165,5 +194,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
         }, 2000);
       }
     });
+  }
+
+  submitForm(form: NgForm): void {
+    if (form.valid) {
+      console.log('Form submitted:', this.formData);
+      this.openSnackBar('Your Form has been successfully submitted');
+    } else {
+      this.openSnackBar('Please fill in all the details in the form');
+    }
+  }
+
+  openSnackBar(message: string): void {
+    const config: MatSnackBarConfig<any> = new MatSnackBarConfig();
+    config.horizontalPosition = 'center';
+    config.verticalPosition = 'bottom';
+    config.duration = 3000;
+    this.snackBar.open(message, 'OK', config);
   }
 }

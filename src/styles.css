@@ -1547,7 +1547,7 @@ header .sound .equalizer .holder {
   margin-bottom: 60px;
   font-weight: 800;
   font-size: 60px;
-  line-height: 1.2;
+  line-height: 1.2 !important;
   padding-right: 35%;
 }
 
@@ -1614,7 +1614,7 @@ header .sound .equalizer .holder {
   margin-bottom: 60px;
   font-weight: 800;
   font-size: 60px;
-  line-height: 1.2;
+  line-height: 1.2 !important;
 }
 
 .process h2:before {
@@ -1715,7 +1715,7 @@ s .process span:before {
   margin-bottom: 60px;
   font-weight: 800;
   font-size: 60px;
-  line-height: 1.2;
+  line-height: 1.2 !important;
   padding-right: 35%;
 }
 
@@ -5385,8 +5385,8 @@ h4,
 h5,
 h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
 }
 
 .h1,
@@ -20414,5 +20414,11 @@ body.compensate-for-scrollbar {
   animation-name: slideOutUp
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

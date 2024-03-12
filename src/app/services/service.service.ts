@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 
 export interface Service {
   slug: string;
@@ -161,5 +162,13 @@ export class ServiceService {
     },
   ];
 
-  constructor() {}
+  constructor(private snackBar: MatSnackBar) {}
+
+  openSnackBar(message: string): void {
+    const config: MatSnackBarConfig<any> = new MatSnackBarConfig();
+    config.horizontalPosition = 'center';
+    config.verticalPosition = 'bottom';
+    config.duration = 3000;
+    this.snackBar.open(message, 'OK', config);
+  }
 }
