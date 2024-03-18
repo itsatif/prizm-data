@@ -3,6 +3,7 @@ import {
   Component,
   ElementRef,
   Inject,
+  OnDestroy,
   OnInit,
   PLATFORM_ID,
   Renderer2,
@@ -42,7 +43,7 @@ import { MatButton } from '@angular/material/button';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   formData: any = {
     name: '',
     phoneNumber: '',
@@ -220,5 +221,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
     config.verticalPosition = 'bottom';
     config.duration = 3000;
     this.snackBar.open(message, 'OK', config);
+  }
+
+  ngOnDestroy(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.isSoundOn = false;
+      this.playOSSound();
+    }
   }
 }
