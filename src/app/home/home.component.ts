@@ -84,13 +84,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.playOSSound();
       this.equalizerAnimation('.equalizer', 180, this.barsHeight);
       this.initializeOwlCarousel();
-      this.playOSSound();
       const mySwiper: Swiper = new Swiper(this.swiperContainer?.nativeElement, {
         // Swiper options here
         // For example:
         slidesPerView: 1,
         spaceBetween: 30,
       });
+      setTimeout((): void => {
+        this.playOSSound();
+      }, 2000);
     }
   }
 
@@ -109,8 +111,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     function animateBars(): void {
-      const spans = equalizer.querySelectorAll('span');
-      spans.forEach((span, idx) => {
+      const spans: NodeListOf<HTMLSpanElement> =
+        equalizer.querySelectorAll('span');
+      spans.forEach((span: HTMLSpanElement, idx: number): void => {
         const height = randomBetween(barsHeight[idx][0], barsHeight[idx][1]);
         (span as HTMLElement).style.height = `${height}px`;
       });
