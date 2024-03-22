@@ -96,15 +96,15 @@ export class ServiceService {
     },
     {
       slug: 'india-data-facts',
-      title: 'India Data Facts',
+      title: 'Data Facts',
       description:
         'Not all clients want full service studies. A lot of clients look at just fieldwork and tabulated\n' +
         '\n' +
-        'data. India Data Facts (IDF) is the answer to such requests.\n' +
+        'data.Data Facts (DF) is the answer to such requests.\n' +
         '\n' +
-        'India Data Facts (IDF) is a data collection arm of Hansa Research. It is a focused vertical of\n' +
+        'Data Facts (DF) is a data collection arm of Hansa Research. It is a focused vertical of\n' +
         '\n' +
-        'Hansa Research for all your ‘data collection only’ requirements',
+        'Prizm Data Research for all your ‘data collection only’ requirements',
       subheading:
         'It is managed by professionals with over 20 years of\n' +
         'experience in the market research industry and can be used\n' +
