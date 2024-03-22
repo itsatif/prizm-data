@@ -26,7 +26,7 @@ import {
 } from '@angular/material/snack-bar';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -40,6 +40,7 @@ import { Router } from '@angular/router';
     FormsModule,
     CommonModule,
     MatButton,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
