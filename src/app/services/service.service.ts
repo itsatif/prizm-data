@@ -153,6 +153,22 @@ export class ServiceService {
       ],
       imgSrc: 'path/to/your/image.jpg',
     },
+    {
+      slug: 'bespoke-services',
+      title: 'Bespoke Services',
+      subheading: '',
+      description:
+        "Customization, adaptability, and individualized attention are our top priorities in order to guarantee that the final outcome fulfills each client's precise needs and expectations. Higher levels of customer satisfaction and loyalty are frequently the outcome of this individualized approach since clients feel that their unique requirements and preferences are being valued and properly met. Bespoke services can include many different types of services, such as:",
+      listItems: [
+        'Tailored Solutions',
+        'Bespoke Experiences',
+        'Personalized Consultation',
+        'Specialized Training and Education',
+        'Commitment to Excellence',
+        'Elevated Customer Satisfaction',
+      ],
+      imgSrc: 'path/to/your/image.jpg',
+    },
   ];
 
   constructor(private snackBar: MatSnackBar) {}

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Observable, scan, takeWhile } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css',
 })
