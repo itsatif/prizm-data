@@ -353,6 +353,7 @@ section {
   top: 0;
   z-index: 9;
   visibility: hidden;
+  background-image: url(assets/images/menu-bg.jpg);
 }
 
 .navigation-menu .bg-layers {
@@ -381,7 +382,7 @@ section {
   position: absolute;
   top: 0;
   transform: skewX(0);
-  background: #e6e6e6;
+  background: rgb(255 255 255 / 70%);
 }
 
 .navigation-menu .bg-layers span:nth-child(1) {
@@ -414,7 +415,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #e6e6e6;
+  background: rgb(255 255 255 / 70%);
   position: absolute;
   right: -149%;
   top: 0;
@@ -488,7 +489,7 @@ section {
   min-height: inherit;
   position: absolute;
   left: 0;
-  top: 70px;
+  top: 50px;
   opacity: 0;
   visibility: hidden;
 }
@@ -509,7 +510,7 @@ section {
   color: #870738;
 }
 
-.navigation-menu .inner .menu ul li ul li:hover ul {
+.navigation-menu .inner .menu ul li ul li:hover ul, .navigation-menu .inner .menu ul li ul li ul.open {
   opacity: 1;
   visibility: visible;
 }
@@ -545,16 +546,16 @@ section {
 }
 
 .navigation-menu.active .bg-layers span {
-  width: calc(25% + 3px);
-  transform: skewX(45deg);
+  width: calc(25% + 0.2px);
+  /*transform: skewX(45deg);*/
 }
 
 .navigation-menu.active .bg-layers span:nth-child(1) {
-  width: calc(25% + 1px);
+  width: calc(25% + 0.2px);
 }
 
 .navigation-menu.active .bg-layers span:nth-child(4) {
-  width: calc(25% + 1px);
+  width: calc(25% + 0.2px);
 }
 
 .navigation-menu.active .inner .menu {
