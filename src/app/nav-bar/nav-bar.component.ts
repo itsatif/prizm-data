@@ -13,6 +13,7 @@ export class NavBarComponent {
   constructor() {}
 
   toggleMenu() {
+    this.closeAllSubMenu();
     const navigationMenu = document.querySelector(
       '.navigation-menu',
     ) as HTMLElement;
@@ -100,8 +101,20 @@ export class NavBarComponent {
     }
   }
 
-  openSubmenu(event): void {
-    const id = event?.target?.id;
-    // document.getElementById(id).classList.add('open');
+  openSubmenu(event: any): void {
+    this.closeAllSubMenu();
+    const { target } = event;
+    target.lastChild.classList.add('open');
+  }
+
+  closeAllSubMenu(): void {
+    const allSubMenu = document.querySelectorAll(
+      '.navigation-menu .inner .menu ul li ul',
+    );
+    allSubMenu.forEach((subMenu: Element): void => {
+      if (subMenu.classList.contains('open')) {
+        subMenu.classList.remove('open');
+      }
+    });
   }
 }

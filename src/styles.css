@@ -458,7 +458,7 @@ section {
   list-style: none;
 }
 
-.navigation-menu .inner .menu ul li:hover ul {
+.navigation-menu .inner .menu ul li ul.open {
   opacity: 1;
   visibility: visible;
 }

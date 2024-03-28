@@ -4,9 +4,9 @@
   <div class="inner" data-tilt data-tilt-perspective="500">
     <div class="menu">
       <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/client-we-serve">Clients We Serve</a></li>
-        <li><a routerLink="/services">Our Services</a>
+        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/">Home</a></li>
+        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/client-we-serve">Clients We Serve</a></li>
+        <li (mouseenter)="openSubmenu($event)"><a routerLink="/services">Our Services</a>
           <ul>
             <li><a routerLink="/services/quantitative-research">Quantitative Research</a></li>
             <li><a routerLink="/services/qualitative-research">Qualitative Research</a></li>
@@ -16,19 +16,19 @@
             <li><a routerLink="/services/solutions">Solutions</a></li>
           </ul>
         </li>
-        <li><a routerLink="/about-us">About Us</a></li>
-        <li><a routerLink="/career">Careers</a></li>
-        <li><a href="/" (mouseenter)="openSubmenu($event)" id="res-center">Resource Center</a>
+        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/about-us">About Us</a></li>
+        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/career">Careers</a></li>
+        <li (mouseenter)="openSubmenu($event)"><a href="/">Resource Center</a>
           <ul>
             <li><a routerLink="/blogs">Blog Insights</a></li>
             <li><a routerLink="/upcoming-events">Upcoming Events</a></li>
             <li><a routerLink="/downloads">Downloadables (Reports)</a></li>
           </ul>
         </li>
-        <li><a routerLink="/contact-us">Contact Us</a></li>
+        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/contact-us">Contact Us</a></li>
       </ul>
     </div>
-    <div class="left"><a routerLink="/join-us">Join Panel</a></div>
+    <div class="left"><a routerLink="/join-us" (mouseenter)="closeAllSubMenu()">Join Panel</a></div>
   </div>
 </div>
 <!-- end navigation-menu -->
