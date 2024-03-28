@@ -1,5 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <header
+  *ngIf="top===100"
   [style.top.%]="top"
   [style.transform]="'translate(-10%, ' + (-top) + '%)'"
   style="position: fixed;
