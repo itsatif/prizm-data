@@ -39,95 +39,95 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <input [(ngModel)]="formData.fname" type="text" class="form-control" placeholder="First Name *"
-                         value=""/>
+                         name="fname" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <input [(ngModel)]="formData.lname" type="text" class="form-control" placeholder="Last Name *"
-                         value=""/>
+                         name="lname" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.companyname" type="text" class="form-control"
-                         placeholder="Company Name *" value=""/>
+                  <input [(ngModel)]="formData.companyname" type="text" class="form-control" placeholder="Company Name"
+                         name="companyname">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.designation" type="text" class="form-control" placeholder="Designation *"
-                         value=""/>
+                  <input [(ngModel)]="formData.designation" type="text" class="form-control" placeholder="Designation"
+                         name="designation">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.email" type="email" class="form-control" placeholder="Email *" value=""/>
+                  <input [(ngModel)]="formData.email" type="email" class="form-control" placeholder="Email *"
+                         name="email" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.dob" type="password" class="form-control" placeholder="Date of birth *"
-                         value=""/>
+                  <input [(ngModel)]="formData.dob" type="date" class="form-control" placeholder="Date of Birth"
+                         name="dob">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select class="form-control">
-                    <option class="hidden" selected disabled>Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
+                  <select [(ngModel)]="formData.gender" class="form-control" name="gender">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select class="form-control">
-                    <option class="hidden" selected disabled>Marital-Status</option>
-                    <option>Single</option>
-                    <option>Married</option>
-                    <option>Widowed</option>
-                    <option>Divorced</option>
-                    <option>Separated</option>
+                  <select [(ngModel)]="formData.maritalStatus" class="form-control" name="maritalStatus">
+                    <option value="" disabled selected>Marital Status</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Separated">Separated</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select class="form-control">
-                    <option class="hidden" selected disabled>Children</option>
-                    <option>0</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4+</option>
+                  <select [(ngModel)]="formData.children" class="form-control" name="children">
+                    <option value="" disabled selected>Children</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4+">4+</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.currency" type="password" class="form-control"
-                         placeholder="USD 20,000 / GBP 20,000" value=""/>
+                  <input [(ngModel)]="formData.currency" type="text" class="form-control" placeholder="Currency"
+                         name="currency">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.country" type="password" class="form-control" placeholder="Country *"
-                         value=""/>
+                  <input [(ngModel)]="formData.country" type="text" class="form-control" placeholder="Country"
+                         name="country">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.zip" type="password" class="form-control" placeholder="Zip Code"
-                         value=""/>
+                  <input [(ngModel)]="formData.zip" type="text" class="form-control" placeholder="Zip Code" name="zip">
                 </div>
               </div>
 
               <input type="submit" class="btnRegister" value="Send"/>
-
             </div>
           </form>
+
         </div>
       </div>
     </div>

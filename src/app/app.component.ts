@@ -9,11 +9,20 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormService } from './sharedServices/form.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, FooterComponent, NavBarComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    FooterComponent,
+    NavBarComponent,
+    HttpClientModule,
+  ],
+  providers: [HttpClientModule, FormService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
