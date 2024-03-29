@@ -27,6 +27,7 @@ import {
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { Router, RouterLink } from '@angular/router';
+import { FormService } from '../sharedServices/form.service';
 
 @Component({
   selector: 'app-home',
@@ -74,6 +75,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private snackBar: MatSnackBar,
     private el: ElementRef,
     private router: Router,
+    private formService: FormService,
   ) {}
 
   ngOnInit(): void {
@@ -208,6 +210,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   submitForm(form: NgForm): void {
     if (form.valid) {
       console.log('Form submitted:', this.formData);
+      this.formService.submitContactQuery(this.formData).subscribe((res) => {
+        console.log(res);
+      });
       this.openSnackBar('Your Form has been successfully submitted');
       this.router.navigate(['thank-you-page']);
     } else {
