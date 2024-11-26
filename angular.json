@@ -24,9 +24,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            },
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
+              "src/theme.scss",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.css",
@@ -96,9 +102,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules"
+              ]
+            },
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
+              "src/theme.scss",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.css",
