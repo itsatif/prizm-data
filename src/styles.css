@@ -5153,7 +5153,7 @@ s .process span:before {
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-  Montserrat, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  Montserrat, Arial, "Noto Sans", sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace;
@@ -23354,15 +23354,6 @@ a.audiobtn span {
   }
 }
 
-@charset "UTF-8";
-
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.1
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2016 Daniel Eden
- */
 
 .animated {
   -webkit-animation-duration: 1s;
