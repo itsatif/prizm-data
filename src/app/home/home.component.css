@@ -2,6 +2,10 @@
   .mob-inject {
     height: auto !important;
   }
+
+  .wrap-flex {
+    flex-wrap: wrap;
+  }
 }
 
 @keyframes fadeInUp {

@@ -425,7 +425,7 @@
       >
         <div class="cta-column wow fadeInRight">
           <div class="sec-title text-center">
-            <span class="sub-title">UALITY DATA SUPPORT</span>
+            <span class="sub-title">QUALITY DATA SUPPORT</span>
             <h2>Our Experience Can Boost Your Business</h2>
           </div>
           <div class="boost-img">
@@ -591,7 +591,7 @@
   </div>
 </section>
 
-<section class="blog-section dg-pdg-both">
+<section class="blog-section dg-pdg-both" style="margin-bottom: 30px">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
@@ -607,7 +607,10 @@
         data-wow-delay="300ms"
         style="animation-delay: 300ms"
       >
-        <div class="blog-loop owl-carousel owl-theme arrowbox outsidearrow">
+        <div
+          class="blog-loop owl-carousel owl-theme arrowbox outsidearrow wrap-flex"
+          style="display: flex; gap: 10px"
+        >
           <div class="blog-item-col">
             <div class="blog-imgarea">
               <img src="/assets/images/blog-img1.jpg" />
@@ -620,7 +623,9 @@
                 for valuable insights to enhance their operations. It involves
                 understanding the needs...
               </p>
-              <a class="butn butn__new hover-this" href="#"
+              <a
+                class="butn butn__new hover-this"
+                href="/blogs/the-power-of-b2b-research-in-strengthening-business"
                 ><span>Read More</span></a
               >
             </div>
@@ -640,7 +645,9 @@
                 understanding of the social world to observe events that affect
                 people. Relevant statistics...
               </p>
-              <a class="butn butn__new hover-this" href="#"
+              <a
+                class="butn butn__new hover-this"
+                href="/blogs/why-is-quantitative-research-essential-for-making-data-driven-decisions"
                 ><span>Read More</span></a
               >
             </div>
@@ -659,12 +666,14 @@
                 deeper understanding of complex behaviors. It helps to unlock
                 valuable insights into the user...
               </p>
-              <a class="butn butn__new hover-this" href="#"
+              <a
+                class="butn butn__new hover-this"
+                href="/blogs/what-insights-can-qualitative-research-offer-beyond-the-numbers"
                 ><span>Read More</span></a
               >
             </div>
           </div>
-          <div class="blog-item-col">
+          <div *ngIf="false" class="blog-item-col">
             <div class="blog-imgarea">
               <img src="/assets/images/blog-img2.jpg" />
             </div>
