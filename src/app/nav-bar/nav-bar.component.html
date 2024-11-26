@@ -1,45 +1,381 @@
-<div class="navigation-menu" (click)="toggleMenu()">
-  <div class="bg-layers"><span></span> <span></span> <span></span> <span></span></div>
-  <!-- end bg-layers -->
-  <div class="inner" data-tilt data-tilt-perspective="500">
-    <div class="menu">
-      <ul>
-        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/">Home</a></li>
-        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/client-we-serve">Clients We Serve</a></li>
-        <li (mouseenter)="openSubmenu($event)"><a routerLink="/services">Our Services</a>
-          <ul>
-            <li><a routerLink="/services/quantitative-research">Quantitative Research</a></li>
-            <li><a routerLink="/services/qualitative-research">Qualitative Research</a></li>
-            <li><a routerLink="/services/b2b-research">B2B Research</a></li>
-            <li><a routerLink="/services/industries">Industries</a></li>
-            <li><a routerLink="/services/bespoke-services">Bespoke Services</a></li>
-            <li><a routerLink="/services/solutions">Solutions</a></li>
-          </ul>
-        </li>
-        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/about-us">About Us</a></li>
-        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/career">Careers</a></li>
-        <li (mouseenter)="openSubmenu($event)"><a href="/">Resource Center</a>
-          <ul>
-            <li><a routerLink="/blogs">Blog Insights</a></li>
-            <li><a routerLink="/upcoming-events">Upcoming Events</a></li>
-            <li><a routerLink="/downloads">Downloadables (Reports)</a></li>
-          </ul>
-        </li>
-        <li (mouseenter)="closeAllSubMenu()"><a routerLink="/contact-us">Contact Us</a></li>
-      </ul>
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light desk-cont"
+  style="position: fixed; top: 170px; padding-bottom: 0 !important"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <div
+    class="container-fluid desk-cont"
+    style="justify-content: unset; gap: 20px"
+  >
+    <div class="nav-left">
+      <a class="navbar-brand" routerLink="/">
+        <img alt="Logo" src="assets/images/logo.png" />
+      </a>
     </div>
-    <div class="left"><a routerLink="/join-us" (mouseenter)="closeAllSubMenu()">Join Panel</a></div>
+    <div class="nav-right">
+      <div class="nav-right-upper">
+        <a
+          class="nav-link text-dark ms-3"
+          href="https://www.linkedin.com/in/prizmdata/"
+          target="_blank"
+        >
+          <i
+            class="fab fa-linkedin"
+            style="color: #870738; font-size: 20px"
+          ></i>
+        </a>
+        <a
+          class="nav-link text-dark"
+          href="https://www.youtube.com/@PrizmData"
+          target="_blank"
+        >
+          <i class="fab fa-youtube" style="color: #870738; font-size: 20px"></i>
+        </a>
+        <a
+          href="mailto:sales@prizmdata.com"
+          style="margin-left: auto; color: #870738; font-size: 18px"
+        >
+          sales&#64;prizmdata.com
+        </a>
+      </div>
+      <div class="nav-right-downer">
+        <button
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarNav"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" style="gap: 30px">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/client-we-serve"
+                >Clients We Serve</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                id="ourServicesDropDown"
+                role="button"
+                routerLink="/services"
+              >
+                Our Services
+              </a>
+              <ul aria-labelledby="ourServicesDropDown" class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    routerLink="/services/quantitative-research"
+                    >Quantitative Research</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    routerLink="/services/qualitative-research"
+                    >Qualitative Research</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/services/b2b-research"
+                    >B2B Research</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/services/industries"
+                    >Industries</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    routerLink="/services/bespoke-services"
+                    >Bespoke Services</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/services/solutions"
+                    >Solutions</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about-us">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                id="resourceCenterDropdown"
+                role="button"
+              >
+                Resource Center
+              </a>
+              <ul
+                aria-labelledby="resourceCenterDropdown"
+                class="dropdown-menu"
+              >
+                <li>
+                  <a class="dropdown-item" routerLink="/blogs">Blog Insights</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/upcoming-events"
+                    >Upcoming Events</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="/downloads"
+                    >Downloadable (Reports)</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contact-us">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary"
+                routerLink="/join-us"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 14px;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                  background-color: #850838;
+                  background-image: linear-gradient(90deg, #870738, #870738);
+                  padding: 10px 20px;
+                  width: unset;
+                  border: 1px solid #fff;
+                  color: #fff;
+                  position: relative;
+                  overflow: hidden;
+                  transition: all 0.3s ease-in-out;
+                  border-radius: 0;
+                  letter-spacing: 3px;
+                  text-align: center;
+                "
+                >Join Our Panel</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<!-- end navigation-menu -->
+</nav>
 
-<nav class="navbar">
-  <div class="logo"><a routerLink="/"><img src="assets/images/logo.png" alt="Image"></a></div>
-  <!-- end logo -->
-  <div class="right">
-    <div class="hamburger-menu"><b>MENU</b>
-      <div class="hamburger" id="hamburger-menu" (click)="toggleMenu()" style="cursor: pointer"><span></span>
-        <span></span> <span></span></div>
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light mob-cont"
+  style="position: fixed; top: 0; padding-bottom: 0 !important"
+>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+      <div
+        class="nav-right-upper"
+        style="position: absolute; right: 15px; top: 0"
+      >
+        <a
+          class="nav-link text-dark ms-3"
+          href="https://www.linkedin.com/in/prizmdata/"
+          target="_blank"
+        >
+          <i
+            class="fab fa-linkedin"
+            style="color: #870738; font-size: 20px"
+          ></i>
+        </a>
+        <a
+          class="nav-link text-dark"
+          href="https://www.youtube.com/@PrizmData"
+          target="_blank"
+        >
+          <i class="fab fa-youtube" style="color: #870738; font-size: 20px"></i>
+        </a>
+      </div>
+      <div
+        class="container-fluid"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: calc(100dvw - 40px);
+        "
+      >
+        <button
+          (click)="toggleSideNav = !toggleSideNav"
+          mat-icon-button
+          style="color: #121212; margin-left: -30px"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div *ngIf="toggleSideNav" class="header">
+          <nav class="menu active" style="top: 60px; height: 100dvh">
+            <div class="menu-mobile-header">
+              <button class="menu-mobile-arrow" type="button">
+                <i class="ion ion-ios-arrow-back"
+                  ><img
+                    alt="back-arrow"
+                    height="47px"
+                    src="/assets/images/back-arrow.png"
+                    width="130px"
+                /></i>
+              </button>
+              <div class="menu-mobile-title"></div>
+              <button
+                (click)="
+                  toggleSideNav = false;
+                  toggleServices = false;
+                  toggleResources = false
+                "
+                class="menu-mobile-close"
+                type="button"
+              >
+                <img
+                  alt="close"
+                  height="47px"
+                  src="/assets/images/close.png"
+                  width="130px"
+                />
+              </button>
+            </div>
+            <ul class="menu-section">
+              <li><a routerLink="/">Home</a></li>
+              <li><a routerLink="/client-we-serve">Clients We Serve</a></li>
+              <li class="menu-item-has-children">
+                <a class="dg-show-desktop">
+                  <span routerLink="/services">Our Services </span
+                  ><i class="ion ion-ios-arrow-down"
+                    ><img
+                      (click)="toggleServices = !toggleServices"
+                      alt="right-arrow"
+                      height="47px"
+                      src="/assets/images/right-arrow.png"
+                      width="130px" /></i
+                ></a>
+                <a class="dg-show-mobile" href="#">
+                  <span routerLink="/services">Our Services </span
+                  ><i class="ion ion-ios-arrow-down"
+                    ><img
+                      (click)="
+                        $event.stopPropagation();
+                        toggleServices = !toggleServices
+                      "
+                      alt="right-arrow"
+                      height="47px"
+                      src="/assets/images/right-arrow.png"
+                      width="130px" /></i
+                ></a>
+                <div
+                  [class.active]="toggleServices"
+                  class="menu-subs menu-mega menu-column-1"
+                >
+                  <div class="list-item">
+                    <ul>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/quantitative-research"
+                          >Quantitative Research</a
+                        >
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/qualitative-research"
+                          >Qualitative Research</a
+                        >
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/b2b-research">B2B Research</a>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/industries">Industries</a>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/bespoke-services"
+                          >Bespoke Services</a
+                        >
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/services/solutions">Solutions</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a routerLink="/about-us">About Us</a></li>
+              <li><a href="/career">Careers</a></li>
+              <li class="menu-item-has-children">
+                <a class="dg-show-desktop" href="#"
+                  >Resource Center<i class="ion ion-ios-arrow-down"
+                    ><img
+                      (click)="toggleResources = !toggleResources"
+                      alt="right-arrow"
+                      height="47px"
+                      src="/assets/images/right-arrow.png"
+                      width="130px" /></i
+                ></a>
+                <a class="dg-show-mobile" href="#"
+                  >Resource Center<i class="ion ion-ios-arrow-down"
+                    ><img
+                      (click)="toggleResources = !toggleResources"
+                      alt="right-arrow"
+                      height="47px"
+                      src="/assets/images/right-arrow.png"
+                      width="130px" /></i
+                ></a>
+                <div
+                  [class.active]="toggleResources"
+                  class="menu-subs menu-mega menu-column-1"
+                >
+                  <div class="list-item">
+                    <ul>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/blogs">Blog Insights</a>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/upcoming-events">Upcoming Events</a>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a routerLink="/downloads">Downloadable (Reports)</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a routerLink="/contact-us">Contact Us</a></li>
+              <li class="showon-mb">
+                <a routerLink="/join-us">Join our Panel</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <a class="navbar-brand" routerLink="/" style="margin-left: 50px">
+          <img
+            alt="PRIZMDATA Logo"
+            src="/assets/images/logo.png"
+            style="height: 50px"
+          />
+        </a>
+        <a
+          href="mailto:sales@prizmdata.com"
+          style="margin-left: auto; color: #870738; font-size: 18px"
+        >
+          sales&#64;prizmdata.com
+        </a>
+      </div>
     </div>
-  </div>
+  </nav>
 </nav>

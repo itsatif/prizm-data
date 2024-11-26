@@ -29,6 +29,8 @@ import { MatButton } from '@angular/material/button';
 import { Router, RouterLink } from '@angular/router';
 import { FormService } from '../sharedServices/form.service';
 
+declare var $: any;
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -181,18 +183,25 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   initializeOwlCarousel(): void {
-    const animatedEl: any = document.querySelectorAll('.swiper-wrapper');
-    const owlItem: any = document.querySelectorAll('.swiper-slide');
-    const screenSize: number =
-      window.innerWidth > 1440 ? 1440 : window.innerWidth;
-    const width: number = screenSize * 7;
+    const sliderEl = document.querySelector<HTMLElement>('.banner-slider');
+    const animatedEls =
+      document.querySelectorAll<HTMLElement>('.banner-slider');
+    const owlItems = document.querySelectorAll<HTMLElement>('.item');
+    const screenSize = window.innerWidth > 1440 ? 1440 : window.innerWidth;
+
+    if (sliderEl) {
+      sliderEl.style.width = `${screenSize * 3}px`;
+    }
     const counterList: number[] = [0, 1, 2].map((it) => it * screenSize);
-    owlItem.forEach((item): void => {
+
+    owlItems.forEach((item): void => {
+      console.log(item);
       if (item?.style) {
         item.style.width = screenSize + 'px';
       }
     });
-    animatedEl.forEach((node): void => {
+    animatedEls.forEach((node): void => {
+      console.log(node);
       if (node?.style) {
         let counterIndex: number = 0;
         setInterval((): void => {
@@ -202,7 +211,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           } else {
             counterIndex = 0;
           }
-        }, 2000);
+        }, 8000);
       }
     });
   }
