@@ -3,3 +3,23 @@
     height: auto !important;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter-block {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.counter-block[data-delay] {
+  animation-delay: attr(data-delay ms);
+}

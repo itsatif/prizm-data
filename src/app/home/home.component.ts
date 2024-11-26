@@ -28,6 +28,14 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { Router, RouterLink } from '@angular/router';
 import { FormService } from '../sharedServices/form.service';
+import {
+  animate,
+  query,
+  stagger,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 declare var $: any;
 
@@ -47,6 +55,21 @@ declare var $: any;
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  animations: [
+    trigger('fadeInUp', [
+      transition(':enter', [
+        query('.counter-block', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(300, [
+            animate(
+              '2s ease-out',
+              style({ opacity: 1, transform: 'translateY(0)' }),
+            ),
+          ]),
+        ]),
+      ]),
+    ]),
+  ],
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   formData: any = {
