@@ -1,489 +1,806 @@
-<header class="header" style="opacity: 1;
-    transition: all 0.05s ease-in-out 0s;
-    transform: scale(1);">
-  <aside class="left-side">
-    <ul>
-      <!--      <li><a href="#">FACEBOOK</a></li>-->
-      <li><a href="https://www.linkedin.com/in/prizmdata">LINKEDIN</a></li>
-      <li><a href="https://youtube.com/@PrizmData?si=eHoAF0MMRYoCBf4J">YOUTUBE</a></li>
-    </ul>
-  </aside>
-  <!-- end left-side -->
-  <div class="scroll-down" (click)="scrollToBottom()"><small>SCROLL DOWN</small><span></span></div>
-  <!-- end scroll-down -->
-  <div (click)="playOSSound()" class="sound" style="cursor: pointer;display: none">
-    <span>Sound</span>
-    <div class="equalizer" style="position: absolute;
-    bottom: 10px;
-    left: -17px;
-    cursor: pointer;">
-      <span></span> <span></span> <span></span> <span></span>
+<section class="banner-sec" style="margin-top: 100px">
+  <div
+    class="banner-slider owl-carousel owl-theme mob-inject"
+    style="display: flex; height: 64dvh"
+  >
+    <div class="item">
+      <div class="item-content">
+        <h2>Market <span>Planning</span></h2>
+        <p>Grab our digital Marketing Deals today <span>01</span></p>
+        <div class="banner-btnbox">
+          <div class="btn-box2">
+            <a class="butn butn__new" href="#"><span>Read More</span></a>
+          </div>
+        </div>
+      </div>
+      <video
+        autoplay=""
+        class="vjs-tech inlinevideo"
+        data-fullscreen="false"
+        data-progressbar="false"
+        data-volume="false"
+        id="vjs_video_3_html90_api"
+        loop=""
+        muted="muted"
+        playsinline="playsinline"
+        preload="auto"
+        role="application"
+        src="/assets/images/video0.mp4"
+        tabindex="-1"
+      ></video>
+    </div>
+    <div class="item">
+      <div class="item-content">
+        <h2>Global <span>Trends</span></h2>
+        <p>Analyzing Trends Shaping [Industry] Worldwide <span>02</span></p>
+        <div class="banner-btnbox">
+          <div class="btn-box2">
+            <a class="butn butn__new" href="#"><span>Read More</span></a>
+          </div>
+        </div>
+      </div>
+      <video
+        autoplay=""
+        class="vjs-tech inlinevideo"
+        data-fullscreen="false"
+        data-progressbar="false"
+        data-volume="false"
+        id="vjs_video_3_html500_api"
+        loop=""
+        muted="muted"
+        playsinline="playsinline"
+        preload="auto"
+        role="application"
+        src="/assets/images/video01.mp4"
+        tabindex="-1"
+      ></video>
+    </div>
+    <div class="item">
+      <div class="item-content">
+        <h2>Targeting <span>Growth</span></h2>
+        <p>Key Market Opportunities Revealed <span>03</span></p>
+        <div class="banner-btnbox">
+          <div class="btn-box2">
+            <a class="butn butn__new" href="#"><span>Read More</span></a>
+          </div>
+        </div>
+      </div>
+      <video
+        autoplay=""
+        class="vjs-tech inlinevideo"
+        data-fullscreen="false"
+        data-progressbar="false"
+        data-volume="false"
+        id="vjs_video_3_html5_api"
+        loop=""
+        muted="muted"
+        playsinline="playsinline"
+        preload="auto"
+        role="application"
+        src="/assets/images/video02.mp4"
+        tabindex="-1"
+      ></video>
     </div>
   </div>
-  <!-- end sound -->
+</section>
 
-  <div #swiper class="swiper-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
-        <div class="video-bg">
-          <video autoplay loop muted playsinline>
-            <source src="assets/videos/video0.mp4" type="video/mp4"/>
-          </video>
-          <div class="container">
-            <div class="tagline"><span>01</span>
-              <h6>Grab our digital Marketing Deals today</h6>
-            </div>
-            <!-- end tagline -->
-            <h1>Market<br>
-              <span>Planning</span></h1>
-            <div class="slide-btn"><a href="/about-us">
-              <div class="lines"><span></span> <span></span></div>
-              <!-- end lines -->
-              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
-                   x="0px"
-                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
-                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
-                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
-              </svg>
-              <b>READ MORE</b> </a></div>
-          </div>
-        </div>
-      </div>
-      <!-- end swiper-slide -->
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
-        <div class="video-bg">
-          <video autoplay loop muted playsinline>
-            <source src="assets/videos/video01.mp4" type="video/mp4">
-          </video>
-          <div class="container">
-            <div class="tagline"><span>02</span>
-              <h6>Analyzing Trends Shaping [Industry] Worldwide</h6>
-            </div>
-            <!-- end tagline -->
-            <h1>Global<br>
-              <span>Trends</span></h1>
-            <div class="slide-btn"><a href="/about-us">
-              <div class="lines"><span></span> <span></span></div>
-              <!-- end lines -->
-              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
-                   x="0px"
-                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
-                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
-                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
-              </svg>
-              <b>READ MORE</b> </a></div>
-          </div>
-        </div>
-      </div>
-      <!-- end swiper-slide -->
-      <div class="swiper-slide" data-tilt data-tilt-max="5" data-tilt-perspective="1500" data-tilt-speed="500">
-        <div class="video-bg">
-          <video autoplay loop muted playsinline src="assets/videos/video02.mp4"></video>
-          <div class="container">
-            <div class="tagline"><span>03</span>
-              <h6>Key Market Opportunities Revealed</h6>
-            </div>
-            <!-- end tagline -->
-            <h1>Targeting<br>
-              <span>Growth</span></h1>
-            <div class="slide-btn"><a href="/about-us">
-              <div class="lines"><span></span> <span></span></div>
-              <!-- end lines -->
-              <svg enable-background="new 0 0 104 104" version="1.1" viewBox="0 0 104 104"
-                   x="0px"
-                   xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
-                <circle class="video-play-circle" cx="52" cy="52" fill="none" r="50"
-                        stroke="#000" stroke-miterlimit="1" stroke-width="2"/>
-              </svg>
-              <b>READ MORE</b> </a></div>
-          </div>
-        </div>
-      </div>
-      <!-- end swiper-slide -->
-    </div>
-    <!-- end swiper-wrapper -->
-    <div class="swiper-pagination"></div>
-    <div class="swiper-fraction"></div>
-  </div>
-  <!-- end swiper-slider -->
-
-</header>
-<!-- end header -->
-
-<section class="intro">
+<section class="service-sec dg-pdg-both">
   <div class="container">
     <div class="row">
-      <div class="col-12 wow fadeInLeft" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s;">
-        <h6>ABOUT PRIZM DATA</h6>
-        <h2 data-text="Digital">Prizm Data & Consulting</h2>
+      <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+        <div class="sec-title text-center">
+          <span class="sub-title"
+            >Easy Way Build Success Your Business Plan</span
+          >
+          <h2>Services We Provide</h2>
+        </div>
       </div>
-      <!-- end col-12 -->
-      <div class="col-lg-5 wow fadeIn">
-        <h4>A fast-growing company in Market Research Industry</h4>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="300ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/image-one.jpg" />
+            </figure>
+            <div class="icon-box">01</div>
+          </div>
+          <div class="sv-content">
+            <h3>Quantitative Research</h3>
+            <p>
+              We use numbers and data to study and analyze trends, patterns, and
+              relationships in a systematic way.
+            </p>
+            <a
+              class="butn butn__new"
+              routerLink="/services/quantitative-research"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
       </div>
-      <!-- end col-5 -->
-      <div class="col-lg-7 wow zoomIn" data-wow-delay="1.5s" style="visibility: visible; animation-delay: 1.5s;">
-        <p><strong>PROLOG INSIGHTS ZILLION MARKET PRIVATE LIMITED</strong> is a fast-growing company in the Market
-          Research industry providing innovative online solutions to global clients with strong skills and technology.
-        </p>
-        <p>A fast-growing company in the <strong>Market Research</strong> industry providing innovative online solutions
-          to global clients with strong skills and technology</p>
-        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
-          href="/about-us">
-          <div class="lines"><span></span> <span></span></div>
-          <!-- end lines -->
-          <b>READ MORE</b></a></div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="600ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/image-two.jpg" />
+            </figure>
+            <div class="icon-box">02</div>
+          </div>
+          <div class="sv-content">
+            <h3>Qualitative Research</h3>
+            <p>
+              Explores people's thoughts, feelings, and behaviors through
+              in-depth interviews, observations, and open-ended questions.
+            </p>
+            <a
+              class="butn butn__new"
+              routerLink="/services/quantitative-research"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="900ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/image-three.jpg" />
+            </figure>
+            <div class="icon-box">03</div>
+          </div>
+          <div class="sv-content">
+            <h3>B2B Research</h3>
+            <p>
+              Focuses on understanding the needs, preferences, and behavior of
+              businesses when making purchasing decisions.
+            </p>
+            <a class="butn butn__new" routerLink="/services/b2b-research"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1200ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/industries.jpg" />
+            </figure>
+            <div class="icon-box">04</div>
+          </div>
+          <div class="sv-content">
+            <h3>Industries</h3>
+            <p>
+              Provides assistance in insights and analysis on various economic
+              sectors, helping businesses understand market trends and make
+              informed decisions.
+            </p>
+            <a class="butn butn__new" routerLink="/services/industries"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1500ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/bespoke-services.jpg" />
+            </figure>
+            <div class="icon-box">05</div>
+          </div>
+          <div class="sv-content">
+            <h3>Bespoke Services</h3>
+            <p>
+              Customization, adaptability, and individualized attention are our
+              top priorities in order to guarantee that the final outcome
+              fulfills each client's precise needs and expectations
+            </p>
+            <a class="butn butn__new" routerLink="/services/bespoke-services"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1800ms"
+      >
+        <div class="sv-container">
+          <div class="image-box">
+            <figure class="image">
+              <img alt="Image" src="/assets/images/image-six.jpg" />
+            </figure>
+            <div class="icon-box">06</div>
+          </div>
+          <div class="sv-content">
+            <h3>Solutions</h3>
+            <p>
+              We offer practical answers and strategies to address business
+              challenges, providing tailored solutions based on comprehensive
+              market analysis.
+            </p>
+            <a class="butn butn__new" routerLink="/services/solutions"
+              ><span>Read More</span></a
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- end intro -->
 
-<section class="services-content-block">
-  <div class="video-bg">
-    <video autoplay loop muted playsinline src="assets/videos/video.mp4"></video>
+<section class="about-section dg-pdg-both">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="sec-title wow fadeInUp text-center">
+          <span class="sub-title">ABOUT PRIZM DATA</span>
+          <h2>Prizm Data & Consulting</h2>
+          <p>
+            <strong>A FAST-GROWING COMPANY IN MARKET RESEARCH INDUSTRY</strong>
+          </p>
+          <p>
+            MARKET RESEARCH INDUSTRY PROLOG INSIGHTS ZILLION MARKET PRIVATE
+            LIMITED is a fast-growing company in the Market Research industry
+            providing innovative online solutions to global clients with strong
+            skills and technology.
+          </p>
+          <p>
+            A fast-growing company in the Market Research industry providing
+            innovative online solutions to global clients with strong skills and
+            technology
+          </p>
+          <a class="butn butn__new hover-this" href="#"
+            ><span>Read More</span></a
+          >
+        </div>
+      </div>
+      <div class="image-column col-lg-12 col-md-12 col-sm-12">
+        <div class="inner-column">
+          <figure class="image-1 wow fadeInLeft">
+            <img alt="" src="/assets/images/about-sec-img1.jpg" />
+          </figure>
+          <figure class="image-1 wow fadeInRight">
+            <img alt="" src="/assets/images/about-sec-img2.jpg" />
+          </figure>
+          <div class="experience wow zoomIn">
+            <span><strong>3600+</strong> Satisfied Client </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!-- end video-bg -->
+</section>
+
+<section class="fun-fact-section dg-pdg-both">
   <div class="container">
     <div class="row">
-      <div class="col-12 wow fadeIn">
-        <h6>FASTEST-GROWING RESEARCH AND ANALYTICS</h6>
-        <h2>Services We Provide </h2>
-      </div>
-      <!-- end col-12 -->
-      <div class="col-md-4 wow rollIn" data-wow-delay="0s">
-        <div class="content-box">
-          <div class="left"><small>01</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Syndicated Studies</h4>
-            <p>We offer a wide range of Syndicated offerings. Off the shelf subscription. Customisable to your
-              requirements.</p>
-          </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+        <div class="sec-title text-center">
+          <span class="sub-title">Unmatched Quality and Reliability</span>
+          <h2>Why Choose Us</h2>
         </div>
       </div>
-      <!-- end col-4 -->
-      <div class="col-md-4 wow flipInX" data-wow-delay="1s">
-        <div class="content-box">
-          <div class="left"><small>02</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Intelligent Automation</h4>
-            <p>A dedicated panel of respondents spread across demographics that provide quick feedback using the mobile
-              app.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-md-4 wow bounceInRight" data-wow-delay="1s">
-        <div class="content-box">
-          <div class="left"><small>03</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Access Panel</h4>
-            <p>A large database of online respondents spread across demographics that provide quick feedback via mail,
-              SMS or calls.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-md-4 wow bounceInLeft" data-wow-delay="1s">
-        <div class="content-box">
-          <div class="left"><small>03</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Digital Qual</h4>
-            <p>We provide access to Online Focus Groups and one-on-one in-depth Interviews for quick, low cost
-              research.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-md-4 wow flipInX" data-wow-delay="1s">
-        <div class="content-box">
-          <div class="left"><small>05</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Virtual World</h4>
-            <p>We assist you to conduct product tests, concept and design checks using Virtual technology.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-md-4 wow bounceInRight" data-wow-delay="1s">
-        <div class="content-box">
-          <div class="left"><small>06</small><span></span></div>
-          <!-- end left -->
-          <div class="right">
-            <h4>Market Planning</h4>
-            <p>We can help you identify your business potential at a district, urban and rural level.</p>
-          </div>
-        </div>
-      </div>
-      <!-- end col-4 -->
     </div>
-  </div>
-</section>
-<!-- end services-content-block -->
-
-<!-- Why Us Section -->
-<section class="why-us">
-  <div class="video-bg">
-    <video autoplay loop muted playsinline src="assets/videos/why-choose-v.mp4"></video>
-  </div>
-  <div class="container">
-    <div class="col-12 wow fadeIn">
-      <h6>EASY WAY BUILD SUCCESS YOUR BUSINESS PLAN</h6>
-      <h2>Services We Provide</h2>
-    </div>
-    <!-- end col-12 -->
     <div class="row">
-      <div class="col-sm-6 col-lg-4 wow rollIn" data-wow-delay="1s">
-        <div class="box">
-          <span>01</span>
-          <h4><a routerLink="/services/quantitative-research">Quantitative
-            Research</a></h4>
-          <p> We use numbers and data to study and analyze trends, patterns, and relationships in a systematic way.</p>
-          <img alt="" src="assets/images/image-one.jpg">
+      <div
+        class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="300ms"
+      >
+        <div class="inner">
+          <div class="icon flaticon-business-060-graph">
+            <img src="/assets/images/complete.png" />
+          </div>
+          <h6 class="counter-title">Project completed</h6>
+          <div class="count-box"><span class="count-text">4520</span></div>
         </div>
       </div>
-      <!-- end col-4 -->
-      <div class="col-sm-6 col-lg-4 wow flipInX" data-wow-delay="1s">
-        <div class="box">
-          <span>02</span>
-          <h4><a routerLink="/services/qualitative-research">Qualitative Research</a>
-          </h4>
-          <p>Explores people's thoughts, feelings, and behaviors through in-depth interviews, observations, and
-            open-ended questions.</p>
-          <img alt="" src="assets/images/image-two.jpg">
+      <div
+        class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="600ms"
+      >
+        <div class="inner">
+          <div class="icon flaticon-business-060-graph">
+            <img src="/assets/images/business.png" />
+          </div>
+          <h6 class="counter-title">Data specialists</h6>
+          <div class="count-box"><span class="count-text">326</span></div>
         </div>
       </div>
-      <!-- end col-4 -->
-      <div class="col-sm-6 col-lg-4 wow bounceInRight" data-wow-delay="1s">
-        <div class="box">
-          <span>03</span>
-          <h4><a routerLink="/services/b2b-research">B2B Research</a></h4>
-          <p>Focuses on understanding the needs, preferences, and behavior of businesses when making purchasing
-            decisions.</p>
-          <img alt="" src="assets/images/image-three.jpg">
+      <div
+        class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="900ms"
+      >
+        <div class="inner">
+          <div class="icon flaticon-business-060-graph">
+            <img src="/assets/images/costumer.png" />
+          </div>
+          <h6 class="counter-title">Satisfied clients</h6>
+          <div class="count-box"><span class="count-text">8600</span></div>
         </div>
       </div>
-      <!-- end col-4 -->
-      <!-- end col-4 -->
-      <div class="col-sm-6 col-lg-4 wow flipInX" data-wow-delay="1s">
-        <div class="box">
-          <span>04</span>
-          <h4><a routerLink="/services/industries">Industries</a></h4>
-          <p>Provides assistance in insights and analysis on various economic sectors, helping businesses understand
-            market trends and make informed decisions.</p>
-          <img alt="" src="assets/images/industries.jpg">
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-4 wow flipInX" data-wow-delay="1s">
-        <div class="box">
-          <span>05</span>
-          <h4><a routerLink="/services/bespoke-services">Bespoke Services</a></h4>
-          <p>Customization, adaptability, and individualized attention are our top priorities in order to guarantee that
-            the final outcome fulfills each client's precise needs and expectations</p>
-          <img alt="" src="assets/images/bespoke-services.jpg">
-        </div>
-      </div>
-      <!-- end col-4 -->
-      <div class="col-sm-6 col-lg-4 wow bounceInRight" data-wow-delay="1s">
-        <div class="box">
-          <span>06</span>
-          <h4><a routerLink="/services/solutions">Solutions</a></h4>
-          <p>We offer practical answers and strategies to address business challenges, providing tailored solutions
-            based on comprehensive market analysis.</p>
-          <img alt="" src="assets/images/image-six.jpg">
+      <div
+        class="counter-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1200ms"
+      >
+        <div class="inner">
+          <div class="icon flaticon-business-060-graph">
+            <img src="/assets/images/idea.png" />
+          </div>
+          <h6 class="counter-title">Smart solutions</h6>
+          <div class="count-box"><span class="count-text">238</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Why Us Section -->
 
-<section class="works">
-  <div class="container">
+<section class="faqs-section" id="contact">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-12 wow fadeIn">
-        <h6>ANALYZE, VISUALIZE, AND SHARE</h6>
-        <h2 data-text="Works">Reporting & <br>Analytics</h2>
+      <div
+        class="form-column col-lg-6 col-md-12 col-sm-12"
+        style="background-image: url(/assets/images/3.jpg)"
+      >
+        <div class="inner-column">
+          <div class="contact-form wow fadeInLeft">
+            <div class="title-box">
+              <span class="sub-title">START WORKING WITH US</span>
+              <h3>PRIZM DATA IN MARKET INDUSTRY</h3>
+              <p>
+                Do you have a project opportunity, or are you just a looking to
+                get creative solutions?
+              </p>
+            </div>
+            <form action="get" id="contact-form" method="post">
+              <div class="form-group">
+                <input
+                  name="full_name"
+                  placeholder="Name"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="Phone"
+                  placeholder="Phone Number"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="Email"
+                  placeholder="Email ID"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Query"
+                  required=""
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button
+                  class="butn butn__new hover-this"
+                  name="submit-form"
+                  type="submit"
+                >
+                  <span>Submit</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <!-- end col-12 -->
-      <div class="col-12">
-        <div class="project-box wow bounceInLeft" data-bg="#faf8ed" data-wow-delay="1s">
-          <figure><a data-fancybox href="assets/videos/feature-video.mp4">
-            <video autoplay loop muted playsinline src="assets/videos/feature-video.mp4"></video>
-          </a></figure>
-          <div class="content-box">
-            <div class="inner"><small>SIMPLE-TO-USE ANALYTICS TOOL</small>
-              <h3><span>Analyze</span>Tool</h3>
-            </div>
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 order-4"
+        style="background-image: url(/assets/images/pattern-2.jpg)"
+      >
+        <div class="cta-column wow fadeInRight">
+          <div class="sec-title text-center">
+            <span class="sub-title">UALITY DATA SUPPORT</span>
+            <h2>Our Experience Can Boost Your Business</h2>
           </div>
-        </div>
-        <!-- end project-box -->
-        <div class="project-box wow flipInX" data-bg="#ece6f4" data-wow-delay="1s">
-          <figure><a data-fancybox href="assets/videos/feature-video-1.mp4">
-            <video autoplay loop muted playsinline src="assets/videos/feature-video-1.mp4"></video>
-          </a></figure>
-          <div class="content-box">
-            <div class="inner"><small>ILLUSTRATE YOUR INSIGHTS WITH COMPELLING DATA VISUALIZATIONS</small>
-              <h3><span>Data</span>Visualize</h3>
-            </div>
+          <div class="boost-img">
+            <img src="/assets/images/boot-img.jpg" />
           </div>
-        </div>
-        <!-- end project-box -->
-        <div class="project-box wow bounceInRight" data-bg="#ebf8f3" data-wow-delay="1s">
-          <figure><a data-fancybox href="assets/videos/feature-video-2.mp4">
-            <video autoplay loop muted playsinline src="assets/videos/feature-video-2.mp4"></video>
-          </a></figure>
-          <div class="content-box">
-            <div class="inner"><small>SHARE YOUR INSIGHTS WITH AUDIENCES OF YOUR CHOOSING</small>
-              <h3><span>Share</span>Insights</h3>
-            </div>
-          </div>
+          <ul>
+            <li>
+              <a href="mailto:sales@prizmdata.com">
+                <div class="img-icon">
+                  <img src="/assets/images/email.png" />
+                </div>
+                <div class="list-content">
+                  <h4>Email Address</h4>
+                  <span>sales&#64;prizmdata.com</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="tel:999999999">
+                <div class="img-icon">
+                  <img src="/assets/images/phone.png" />
+                </div>
+                <div class="list-content">
+                  <h4>Phone Number</h4>
+                  <span>999 999 999</span>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- end col-12 -->
-    </div>
-    <!-- end row -->
-    <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
-      href="/blogs">
-      <div class="lines"><span></span> <span></span></div>
-      <b>READ MORE</b></a>
     </div>
   </div>
 </section>
-<!-- end works -->
 
-<section class="work-with-us">
-  <div class="video-bg">
-    <video autoplay loop muted playsinline src="assets/videos/call-to-video.mp4"></video>
-  </div>
+<section class="service2-section dg-pdg-both">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 col-12 wow swing">
-        <h6>START WORKING WITH US</h6>
-        <h2 data-text="Hire us">Prizm Data in Market industry</h2>
-        <h4>Do you have a project opportunity, or are you just a looking to get creative solutions?</h4>
-      </div>
-      <!-- end col-12 -->
-      <div class="col-md-5 col-12 hello wow shake">
-        <form class="row inner" id="contact" method="post" #myForm="ngForm" (ngSubmit)="submitForm(myForm)"
-              name="contact" novalidate="novalidate">
-          <div class="form-group col-sm-6 col-12">
-            <label><span>Name</span></label>
-            <input [(ngModel)]="formData.name" id="name" name="name" required="" type="text">
-          </div>
-          <div class="form-group col-sm-6 col-12">
-            <label><span>Mobile No.</span></label>
-            <input [(ngModel)]="formData.phoneNumber" id="phone" name="phone" required="" type="text">
-          </div>
-          <div class="form-group col-sm-12 col-12">
-            <label><span>Email</span></label>
-            <input [(ngModel)]="formData.email" id="email" name="email" required="" type="text">
-          </div>
-          <div class="form-group col-12">
-            <label><span>Message</span></label>
-            <textarea [(ngModel)]="formData.message" id="message" name="message" required=""></textarea>
-          </div>
-          <div class="form-group col-12">
-            <button mat-raised-button id="submit" name="submit" type="submit">SUBMIT</button>
-          </div>
-          <!-- end form-group -->
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end work-with-us -->
-
-<section class="clients">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="col-lg-8 wow fadeIn" data-wow-delay="1s">
-        <h6>START WORKING WITH US</h6>
-        <h2>Our Clients</h2>
-        <h4>Do you have a project opportunity, or are you just a looking to get creative solutions?</h4>
-        <div class="custom-link wow pulse" data-wow-delay="1s" data-wow-duration="2s" data-wow-iteration="infinite"><a
-          href="#">
-          <div class="lines"><span></span> <span></span></div>
-          <!-- end lines -->
-          <b>BE OUR CLIENT</b></a></div>
-      </div>
-      <!-- end col-5 -->
-      <!-- <div class="col-lg-7 wow pulse" data-wow-delay="1s" data-wow-iteration="infinite" data-wow-duration="2s">
-        <ul>
-          <li><img src="assets/images/logo01.png" alt="Image"><small>BULOVA</small></li>
-          <li><img src="assets/images/logo02.png" alt="Image"><small>CASIO</small></li>
-          <li><img src="assets/images/logo03.svg" alt="Image"><small>CITIZEN</small></li>
-          <li><img src="assets/images/logo04.png" alt="Image"><small>GIORGIO ARMANI</small></li>
-          <li><img src="assets/images/logo05.png" alt="Image"><small>MICHAEL KORS</small></li>
-          <li><img src="assets/images/logo06.png" alt="Image"><small>ACCURIST</small></li>
-          <li><img src="assets/images/logo07.png" alt="Image"><small>ARMANI EXCHANGE</small></li>
-          <li><img src="assets/images/logo03.svg" alt="Image"><small>CITIZEN</small></li>
-        </ul>
-      </div> -->
-      <!-- end col-7 -->
-    </div>
-  </div>
-</section>
-<!-- end clients -->
-
-<section class="blog-sec">
-  <div class="container">
-    <div class="col-12 wow fadeIn">
-      <h6>FASTEST-GROWING Research AND Analytics</h6>
-      <h2>Our Latest Insights</h2>
-    </div>
-    <!-- end col-12 -->
-    <ng-container *ngIf="blogs$ | async as blogsData">
-      <div class="row retro-layout">
-        <div *ngFor="let blog of blogsData" class="col-md-4 wow bounceInLeft">
-          <a [href]="'/blogs/' + blog.slug" [style.background-image]="'url(' + blog.imageUrl + ')'"
-             class="hentry img-1 gradient">
-            <div class="text">
-              <h2>{{ blog.title }}</h2>
-              <span>{{ blog.date }}</span>
-            </div>
-          </a>
+      <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+        <div class="sec-title text-center">
+          <h2>FASTEST-GROWING RESEARCH AND ANALYTICS</h2>
         </div>
-        <!-- end col-4 -->
       </div>
-    </ng-container>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="300ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon6.png" />
+          </div>
+          <h3>Syndicated Studies</h3>
+          <p>
+            We offer a wide range of Syndicated offerings. Off the shelf
+            subscription. Customisable to your requirements.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="600ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon5.png" />
+          </div>
+          <h3>Intelligent Automation</h3>
+          <p>
+            A dedicated panel of respondents spread across demographics that
+            provide quick feedback using the mobile app.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="900ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon4.png" />
+          </div>
+          <h3>Access Panel</h3>
+          <p>
+            A large database of online respondents spread across demographics
+            that provide quick feedback via mail, SMS or calls.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1200ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon3.png" />
+          </div>
+          <h3>Digital Qual</h3>
+          <p>
+            We provide access to Online Focus Groups and one-on-one in-depth
+            Interviews for quick, low cost research.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1500ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon2.png" />
+          </div>
+          <h3>Virtual World</h3>
+          <p>
+            We assist you to conduct product tests, concept and design checks
+            using Virtual technology.
+          </p>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
+        data-wow-delay="1800ms"
+      >
+        <div class="sv-style2-col">
+          <div class="sv-st2-icon">
+            <img src="/assets/images/svicon1.png" />
+          </div>
+          <h3>Market Planning</h3>
+          <p>
+            We can help you identify your business potential at a district,
+            urban and rural level.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- end blogs -->
-
-<section class="testimonial-sec wow swing">
-  <div class="video-bg">
-    <video autoplay loop muted playsinline src="assets/videos/testimonial-bg.mp4"></video>
-  </div>
-  <div class="container">
-    <div class="col-12 wow fadeIn">
-      <h2>Client Testimonials </h2>
+<section class="client-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 p-0 wow fadeInLeft">
+        <div class="client-sec-content">
+          <div class="sec-title text-center">
+            <span class="sub-title">START WORKING WITH US</span>
+            <h2>Our Clients</h2>
+            <p>
+              DO YOU HAVE A PROJECT OPPORTUNITY, OR ARE YOU JUST A LOOKING TO
+              GET CREATIVE SOLUTIONS?
+            </p>
+            <a class="butn butn__new hover-this" href="#"
+              ><span>BE OUR CLIENT</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6 client-img col-md-12 col-sm-12 p-0 wow fadeInRight"
+      ></div>
     </div>
-    <div class="testimonial mySwiper">
-      <ng-container *ngIf="reviews && reviews.length > 0; else noReviews">
-        <div class="testi-content swiper-wrapper">
-          <!-- Check if reviews array exists and is not empty -->
-          <div *ngFor="let review of reviews" class="slide swiper-slide">
-            <p>{{ review.content }}</p>
-            <img src="assets/images/left-quote.png"/>
-            <div class="details">
-              <span class="name">{{ review.name }}</span>
+  </div>
+</section>
+
+<section class="blog-section dg-pdg-both">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+        <div class="sec-title text-center">
+          <span class="sub-title">FASTEST-GROWING Research AND Analytics</span>
+          <h2>Our Latest Insights</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp"
+        data-wow-delay="300ms"
+      >
+        <div class="blog-loop owl-carousel owl-theme arrowbox outsidearrow">
+          <div class="blog-item-col">
+            <div class="blog-imgarea">
+              <img src="/assets/images/blog-img1.jpg" />
+            </div>
+            <div class="blog-content">
+              <div class="datebox">29-Feb-2024</div>
+              <h3>The Power of B2B Research in Strengthening Business</h3>
+              <p>
+                B2B research is like a treasure hunt. Here, businesses search
+                for valuable insights to enhance their operations. It involves
+                understanding the needs...
+              </p>
+              <a class="butn butn__new hover-this" href="#"
+                ><span>Read More</span></a
+              >
             </div>
           </div>
-          <!-- Render "No Reviews Yet" if reviews array is empty -->
+          <div class="blog-item-col">
+            <div class="blog-imgarea">
+              <img src="/assets/images/blog-img2.jpg" />
+            </div>
+            <div class="blog-content">
+              <div class="datebox">09-March-2024</div>
+              <h3>
+                Why Is Quantitative Research Essential For Making Data-Driven
+                Decisions?
+              </h3>
+              <p>
+                The motto of quantitative research is to acquire knowledge and
+                understanding of the social world to observe events that affect
+                people. Relevant statistics...
+              </p>
+              <a class="butn butn__new hover-this" href="#"
+                ><span>Read More</span></a
+              >
+            </div>
+          </div>
+          <div class="blog-item-col">
+            <div class="blog-imgarea">
+              <img src="/assets/images/blog-img3.jpg" />
+            </div>
+            <div class="blog-content">
+              <div class="datebox">10-March-2024</div>
+              <h3>
+                What Insights Can Qualitative Research Offer Beyond the Numbers?
+              </h3>
+              <p>
+                Qualitative research is a very powerful tool that provides a
+                deeper understanding of complex behaviors. It helps to unlock
+                valuable insights into the user...
+              </p>
+              <a class="butn butn__new hover-this" href="#"
+                ><span>Read More</span></a
+              >
+            </div>
+          </div>
+          <div class="blog-item-col">
+            <div class="blog-imgarea">
+              <img src="/assets/images/blog-img2.jpg" />
+            </div>
+            <div class="blog-content">
+              <div class="datebox">09-March-2024</div>
+              <h3>
+                Why Is Quantitative Research Essential For Making Data-Driven
+                Decisions?
+              </h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+              <a class="butn butn__new hover-this" href="#"
+                ><span>Read More</span></a
+              >
+            </div>
+          </div>
         </div>
-      </ng-container>
-      <ng-template #noReviews>
-        <h3 style="text-align: center">No Reviews Yet</h3>
-      </ng-template>
-      <div class="swiper-pagination"></div>
+      </div>
     </div>
+  </div>
+</section>
 
+<section *ngIf="false" class="testi-section dg-pdg-both">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp">
+        <div class="sec-title text-center">
+          <span class="sub-title">OUR FEEDBACKS</span>
+          <h2>What They’re Talking About Company</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div
+        class="col-lg-12 col-md-12 col-sm-12 wow fadeInUp"
+        data-wow-delay="300ms"
+      >
+        <div class="testislider owl-carousel owl-theme arrowbox outsidearrow">
+          <div class="testi-item">
+            <div class="testimonial-block_one-info">
+              <div class="testimonial-block_one-author">
+                <img alt="" src="/assets/images/author-1.jpg" />
+              </div>
+              <div class="testi-info">
+                <div class="testimonial-block_one-rating">
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                </div>
+                <h5>Darrell Steward</h5>
+                <span class="testimonial-block_one-designation"
+                  >Lorem ipsum</span
+                >
+              </div>
+            </div>
+            <div class="testimonial-block_one-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              imn industry Lorem Ipsum has been the industry's Lorem Ipsum is
+              simplmi dummy text of the printing and typesetting industry
+            </div>
+          </div>
+          <div class="testi-item">
+            <div class="testimonial-block_one-info">
+              <div class="testimonial-block_one-author">
+                <img alt="" src="/assets/images/author-1.jpg" />
+              </div>
+              <div class="testi-info">
+                <div class="testimonial-block_one-rating">
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                </div>
+                <h5>Darrell Steward</h5>
+                <span class="testimonial-block_one-designation"
+                  >Lorem ipsum</span
+                >
+              </div>
+            </div>
+            <div class="testimonial-block_one-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              imn industry Lorem Ipsum has been the industry's Lorem Ipsum is
+              simplmi dummy text of the printing and typesetting industry
+            </div>
+          </div>
+          <div class="testi-item">
+            <div class="testimonial-block_one-info">
+              <div class="testimonial-block_one-author">
+                <img alt="" src="/assets/images/author-1.jpg" />
+              </div>
+              <div class="testi-info">
+                <div class="testimonial-block_one-rating">
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                </div>
+                <h5>Darrell Steward</h5>
+                <span class="testimonial-block_one-designation"
+                  >Lorem ipsum</span
+                >
+              </div>
+            </div>
+            <div class="testimonial-block_one-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              imn industry Lorem Ipsum has been the industry's Lorem Ipsum is
+              simplmi dummy text of the printing and typesetting industry
+            </div>
+          </div>
+          <div class="testi-item">
+            <div class="testimonial-block_one-info">
+              <div class="testimonial-block_one-author">
+                <img alt="" src="/assets/images/author-1.jpg" />
+              </div>
+              <div class="testi-info">
+                <div class="testimonial-block_one-rating">
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                  <i aria-hidden="true" class="fa fa-star"></i>
+                </div>
+                <h5>Darrell Steward</h5>
+                <span class="testimonial-block_one-designation"
+                  >Lorem ipsum</span
+                >
+              </div>
+            </div>
+            <div class="testimonial-block_one-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              imn industry Lorem Ipsum has been the industry's Lorem Ipsum is
+              simplmi dummy text of the printing and typesetting industry
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
