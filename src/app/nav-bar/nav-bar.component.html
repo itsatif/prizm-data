@@ -187,13 +187,13 @@
 
 <nav
   class="navbar navbar-expand-lg navbar-light bg-light mob-cont"
-  style="position: fixed; top: 0; padding-bottom: 0 !important"
+  style="position: fixed; top: 20px; padding-bottom: 0 !important"
 >
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div>
       <div
         class="nav-right-upper"
-        style="position: absolute; right: 15px; top: 0"
+        style="position: absolute; right: 15px; top: 0;width: calc(100dvw - 40px);"
       >
         <a
           class="nav-link text-dark ms-3"
@@ -212,14 +212,25 @@
         >
           <i class="fab fa-youtube" style="color: #870738; font-size: 20px"></i>
         </a>
+        <a
+          href="mailto:sales@prizmdata.com"
+          style="
+            margin-left: auto;
+            color: black;
+            font-size: 18px;
+            font-family: 'Montserrat',serif;
+          "
+        >
+          sales&#64;prizmdata.com
+        </a>
       </div>
       <div
         class="container-fluid"
         style="
           display: flex;
-          align-items: center;
-          justify-content: space-between;
+          align-items: flex-end;
           width: calc(100dvw - 40px);
+          min-height: 80px;
         "
       >
         <button
@@ -367,23 +378,14 @@
             </ul>
           </nav>
         </div>
-        <a class="navbar-brand" routerLink="/" style="margin-left: 50px">
+        <a class="navbar-brand" routerLink="/" style="position: absolute;
+    left: 50%;
+    transform: translateX(-50%);">
           <img
             alt="PRIZMDATA Logo"
             src="/assets/images/logo.png"
             style="height: 50px"
           />
-        </a>
-        <a
-          href="mailto:sales@prizmdata.com"
-          style="
-            margin-left: auto;
-            color: black;
-            font-size: 18px;
-            font-family: &quot;Montserrat&quot;;
-          "
-        >
-          sales&#64;prizmdata.com
         </a>
       </div>
     </div>
