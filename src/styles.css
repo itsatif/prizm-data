@@ -16,12 +16,14 @@ body {
 .mat-typography .mat-headline-6,
 .mat-typography h2 {
   font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
 }
 
 .mat-h5,
 .mat-typography .mat-h5,
 .mat-typography h5 {
   font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
 }
 
 .mat-h4,
@@ -30,6 +32,7 @@ body {
 .mat-typography .mat-body-1,
 .mat-typography h4 {
   font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
 }
 
 .mat-h3,
@@ -38,6 +41,7 @@ body {
 .mat-typography .mat-subtitle-1,
 .mat-typography h3 {
   font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
 }
 
 .mat-body,
@@ -21705,7 +21709,7 @@ ul.social-icon-one li a:hover i {
 
 .item-content h2 {
   font-size: 52px;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #000;
 }
 
@@ -21934,7 +21938,7 @@ header.header.sticky .header-item-left img {
 }*/
 .sec-title h2 {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 600 !important;
   text-transform: uppercase;
   color: #860738;
 }
@@ -21990,7 +21994,7 @@ figure.image img {
 }
 
 .sv-content h3 {
-  font-weight: bold;
+  font-weight: bold !important;
   margin-top: 30px;
   font-size: 22px;
 }
@@ -22221,7 +22225,7 @@ h6.counter-title {
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0px;
+  padding: 0;
   background-color: transparent;
   mix-blend-mode: difference;
   transition: transform 0.3s ease;
