@@ -91,7 +91,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ];
   interval: any;
   duration: number = 5000;
+  right: number = 1000;
   @ViewChild('swiper', { static: false }) swiperContainer: ElementRef;
+  counterIndex: any = [];
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -111,7 +113,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       this.playOSSound();
       this.equalizerAnimation('.equalizer', 180, this.barsHeight);
-      this.initializeOwlCarousel();
+      this.initializeOwlCarouselINS();
       const mySwiper: Swiper = new Swiper(this.swiperContainer?.nativeElement, {
         // Swiper options here
         // For example:
@@ -205,7 +207,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  initializeOwlCarousel(): void {
+  initializeOwlCarousel(direction: 'left' | 'right'): void {
     const sliderEl = document.querySelector<HTMLElement>('.banner-slider');
     const animatedEls =
       document.querySelectorAll<HTMLElement>('.banner-slider');
@@ -218,6 +220,43 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const counterList: number[] = [0, 1, 2].map((it) => it * screenSize);
 
     owlItems.forEach((item): void => {
+      if (item?.style) {
+        item.style.width = screenSize + 'px';
+      }
+    });
+
+    animatedEls.forEach((node): void => {
+      if (node?.style) {
+        if (!this.counterIndex) {
+          this.counterIndex = 0;
+        }
+
+        if (direction === 'right') {
+          this.counterIndex = (this.counterIndex + 1) % counterList.length;
+        } else if (direction === 'left') {
+          this.counterIndex =
+            (this.counterIndex - 1 + counterList.length) % counterList.length;
+        }
+        this.right = counterList[this.counterIndex];
+        node.style.transform = `translate3d(-${counterList[this.counterIndex]}px, 0px, 0px)`;
+      }
+    });
+  }
+
+  initializeOwlCarouselINS(): void {
+    const sliderEl = document.querySelector<HTMLElement>('.banner-slider');
+    const animatedEls =
+      document.querySelectorAll<HTMLElement>('.banner-slider');
+    const owlItems = document.querySelectorAll<HTMLElement>('.item');
+    const screenSize = window.innerWidth > 1440 ? 1440 : window.innerWidth;
+
+    if (sliderEl) {
+      sliderEl.style.width = `${screenSize * 3}px`;
+    }
+    const counterList: number[] = [0, 1, 2].map((it) => it * screenSize);
+    this.counterIndex = 0;
+    this.right = counterList[this.counterIndex];
+    owlItems.forEach((item): void => {
       console.log(item);
       if (item?.style) {
         item.style.width = screenSize + 'px';
@@ -227,14 +266,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       console.log(node);
       if (node?.style) {
         let counterIndex: number = 0;
-        setInterval((): void => {
-          if (counterIndex < counterList.length) {
-            node.style.transform = `translate3d(-${counterList[counterIndex]}px, 0px, 0px)`;
-            counterIndex++;
-          } else {
-            counterIndex = 0;
-          }
-        }, 8000);
+        // setInterval((): void => {
+        //   if (counterIndex < counterList.length) {
+        //     node.style.transform = `translate3d(-${counterList[counterIndex]}px, 0px, 0px)`;
+        //     counterIndex++;
+        //   } else {
+        //     counterIndex = 0;
+        //   }
+        // }, 80000000);
       }
     });
   }
