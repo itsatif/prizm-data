@@ -8,6 +8,24 @@ body {
   font-size: 17px;
   color: #0e0e0e;
   overflow: inherit;
+  cursor: none;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0px;
+  background-color: red;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+  z-index: 9999999999999;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ffffff;
+}
+
+.hover-this:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(8);
 }
 
 .mat-h2,

@@ -1,20 +1,20 @@
 <app-nav-bar></app-nav-bar>
 <header
-  *ngIf="top===100"
+  *ngIf="top === 100"
   [style.top.%]="top"
-  [style.transform]="'translate(-10%, ' + (-top) + '%)'"
-  style="position: fixed;
-    right: 40px;
-    z-index: 3;">
+  [style.transform]="'translate(-10%, ' + -top + '%)'"
+  style="position: fixed; right: 40px; z-index: 3"
+>
   <div (click)="playOSSound()" class="sound" style="cursor: pointer">
     <span>Sound</span>
-    <div class="equalizer" style="position: absolute;
-    bottom: 10px;
-    left: -17px;
-    cursor: pointer;">
+    <div
+      class="equalizer"
+      style="position: absolute; bottom: 10px; left: -17px; cursor: pointer"
+    >
       <span></span> <span></span> <span></span> <span></span>
     </div>
   </div>
 </header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+<div class="cursor"></div>

@@ -46,6 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
+      this.initializeCursorEffect();
       this.router.events.subscribe((event): void => {
         if (event instanceof NavigationEnd) {
           window.scrollTo(0, 0);
@@ -146,6 +147,41 @@ export class AppComponent implements OnInit, OnDestroy {
         this.source.stop();
       }
     }
+  }
+
+  initializeCursorEffect(): void {
+    const link = document.querySelectorAll<HTMLElement>('nav > .hover-this');
+    const cursor = document.querySelector<HTMLElement>('.cursor');
+
+    const animateit = function (e: MouseEvent) {
+      const span = this.querySelector('span') as HTMLElement;
+      const { offsetX: x, offsetY: y } = e,
+        { offsetWidth: width, offsetHeight: height } = this,
+        move = 25,
+        xMove = (x / width) * (move * 2) - move,
+        yMove = (y / height) * (move * 2) - move;
+
+      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+      if (e.type === 'mouseleave') {
+        span.style.transform = '';
+      }
+    };
+
+    const editCursor = (e: MouseEvent) => {
+      const { clientX: x, clientY: y } = e;
+      if (cursor) {
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+      }
+    };
+
+    link.forEach((b) => {
+      b.addEventListener('mousemove', animateit);
+      b.addEventListener('mouseleave', animateit);
+    });
+
+    window.addEventListener('mousemove', editCursor);
   }
 
   ngOnDestroy(): void {

@@ -30,10 +30,10 @@
         src="/assets/images/video0.mp4"
         tabindex="-1"
       ></video>
-      <div class="owl-nav">
+      <div class="owl-nav desktop-only">
         <button
           (click)="initializeOwlCarousel('left')"
-          class="owl-prev"
+          class="owl-prev banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -44,7 +44,7 @@
         </button>
         <button
           (click)="initializeOwlCarousel('right')"
-          class="owl-next"
+          class="owl-next banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -80,10 +80,10 @@
         src="/assets/images/video01.mp4"
         tabindex="-1"
       ></video>
-      <div class="owl-nav">
+      <div class="owl-nav desktop-only">
         <button
           (click)="initializeOwlCarousel('left')"
-          class="owl-prev"
+          class="owl-prev banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -94,7 +94,7 @@
         </button>
         <button
           (click)="initializeOwlCarousel('right')"
-          class="owl-next"
+          class="owl-next desktop-only banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -130,10 +130,10 @@
         src="/assets/images/video02.mp4"
         tabindex="-1"
       ></video>
-      <div class="owl-nav">
+      <div class="owl-nav desktop-only">
         <button
           (click)="initializeOwlCarousel('left')"
-          class="owl-prev"
+          class="owl-prev banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -144,7 +144,7 @@
         </button>
         <button
           (click)="initializeOwlCarousel('right')"
-          class="owl-next"
+          class="owl-next desktop-only banner-btn"
           role="presentation"
           style="display: flex"
           type="button"
@@ -153,6 +153,29 @@
         </button>
       </div>
     </div>
+  </div>
+  <div class="owl-dots">
+    <button
+      (click)="initializeOwlCarousel('left')"
+      class="owl-dot active"
+      role="button"
+    >
+      <span></span>
+    </button>
+    <button
+      (click)="initializeOwlCarousel('right')"
+      class="owl-dot"
+      role="button"
+    >
+      <span></span>
+    </button>
+    <button
+      (click)="initializeOwlCarousel('right')"
+      class="owl-dot"
+      role="button"
+    >
+      <span></span>
+    </button>
   </div>
 </section>
 

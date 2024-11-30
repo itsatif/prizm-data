@@ -3,9 +3,17 @@
     height: auto !important;
   }
 
+  .desktop-only {
+    display: none;
+  }
+
   .wrap-flex {
     flex-wrap: wrap;
   }
+}
+
+.banner-btn:hover {
+  background: none !important;
 }
 
 @keyframes fadeInUp {
