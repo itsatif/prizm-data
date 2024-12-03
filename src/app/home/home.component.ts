@@ -212,7 +212,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const animatedEls =
       document.querySelectorAll<HTMLElement>('.banner-slider');
     const owlItems = document.querySelectorAll<HTMLElement>('.item');
-    const screenSize = window.innerWidth > 1440 ? 1440 : window.innerWidth;
+    const screenSize = window.innerWidth ?? 1440;
 
     if (sliderEl) {
       sliderEl.style.width = `${screenSize * 3}px`;
@@ -248,7 +248,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const animatedEls =
       document.querySelectorAll<HTMLElement>('.banner-slider');
     const owlItems = document.querySelectorAll<HTMLElement>('.item');
-    const screenSize = window.innerWidth > 1440 ? 1440 : window.innerWidth;
+    const screenSize = window.innerWidth ?? 1440;
 
     if (sliderEl) {
       sliderEl.style.width = `${screenSize * 3}px`;
