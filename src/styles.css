@@ -15,13 +15,13 @@ body {
   pointer-events: none;
   position: fixed;
   padding: 0px;
-  background-color: red;
+  background-color: transparent;
   mix-blend-mode: difference;
   transition: transform 0.3s ease;
   z-index: 9999999999999;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ffffff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 15px solid #ffffff;
 }
 
 .hover-this:hover ~ .cursor {
@@ -33,14 +33,14 @@ body {
 .mat-typography .mat-h2,
 .mat-typography .mat-headline-6,
 .mat-typography h2 {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Jost" !important;
   font-weight: 500;
 }
 
 .mat-h5,
 .mat-typography .mat-h5,
 .mat-typography h5 {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Jost" !important;
   font-weight: 500;
 }
 
@@ -49,7 +49,7 @@ body {
 .mat-typography .mat-h4,
 .mat-typography .mat-body-1,
 .mat-typography h4 {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Jost" !important;
   font-weight: 500;
 }
 
@@ -58,7 +58,7 @@ body {
 .mat-typography .mat-h3,
 .mat-typography .mat-subtitle-1,
 .mat-typography h3 {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Jost" !important;
   font-weight: 500;
 }
 
@@ -356,9 +356,9 @@ section {
 }
 
 .equalizer span {
-  background: #000;
-  width: 1px;
-  height: 1px;
+  background: #870738;
+  width: 2px;
+  height: 4px;
   top: 50%;
   bottom: 0;
   left: 0%;
@@ -369,26 +369,32 @@ section {
 
 .equalizer span:nth-child(1) {
   margin-left: 4px;
+  color: #870738;
 }
 
 .equalizer span:nth-child(2) {
   margin-left: 8px;
+  color: #870738;
 }
 
 .equalizer span:nth-child(4) {
   margin-left: 12px;
+  color: #870738;
 }
 
 .equalizer span:nth-child(5) {
   margin-left: 16px;
+  color: #870738;
 }
 
 .equalizer span:nth-child(6) {
   margin-left: 20px;
+  color: #870738;
 }
 
 .equalizer.paused span {
-  height: 4px !important;
+  height: 8px !important;
+  color: #870738;
 }
 
 /* NAVIGATION MENU */
@@ -2954,7 +2960,7 @@ s .process span:before {
   text-align: center;
   padding: 0 108px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700 !important;
   color: #000;
 }
 
@@ -4032,14 +4038,14 @@ s .process span:before {
 
 .box.has-secondary-bg {
   background: #840838;
-  transition: 0.2s cubic-bezier(0.5, 0, 0.35, 1);
+  transition: 5s cubic-bezier(0.5, 0, 0.35, 1);
 }
 
 .box.has-shadow {
   background: #fff;
   box-shadow: 0 0 0 0 #eee;
   box-shadow: 0 14px 33px -3px rgba(0, 0, 0, 0.078);
-  transition: 0.2s cubic-bezier(0.5, 0, 0.35, 1);
+  transition: 2s cubic-bezier(0.5, 0, 0.35, 1);
 }
 
 .box .box-particles2 {
@@ -21733,7 +21739,7 @@ ul.social-icon-one li a:hover i {
 
 .item-content p {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   color: #000;
 }
@@ -21943,17 +21949,6 @@ header.header.sticky .header-item-left img {
   font-weight: bold;
 }
 
-/*.sec-title .sub-title:before {
-    background: #870738;
-    content: "";
-    height: 4px;
-    left: 100%;
-    margin-left: 10px;
-    margin-top: -1px;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-}*/
 .sec-title h2 {
   font-size: 40px;
   font-weight: 600 !important;
@@ -22238,19 +22233,6 @@ figure.image:after {
 }
 
 h6.counter-title {
-}
-
-.cursor {
-  pointer-events: none;
-  position: fixed;
-  padding: 0;
-  background-color: transparent;
-  mix-blend-mode: difference;
-  transition: transform 0.3s ease;
-  z-index: 9999999999999;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ffffff;
 }
 
 .hover-this:hover ~ .cursor {
@@ -23395,6 +23377,15 @@ a.audiobtn span {
     padding: 40px 15px;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Jost", serif !important;
+  }
+
   .cursor {
     display: none;
   }
@@ -24351,6 +24342,8 @@ a.audiobtn span {
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
 }
 
 @-webkit-keyframes bounceInUp {
