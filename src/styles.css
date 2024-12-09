@@ -3157,7 +3157,6 @@ s .process span:before {
   }
 }
 
-/* why choose css*/
 .why-us h2 {
   margin-bottom: 40px;
   font-weight: 800;
@@ -3183,7 +3182,7 @@ s .process span:before {
 
 .why-us .box {
   padding: 50px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
   position: relative;
   background-color: #333;
@@ -22826,13 +22825,12 @@ h6.counter-title {
 }
 
 .box {
-  transform: scaleY(0.4);
   height: 100%;
   width: var(--boxSize);
   background: #870738;
-  animation-duration: 1.2s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3;
   border-radius: 8px;
 }
 

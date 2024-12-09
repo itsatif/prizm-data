@@ -32,7 +32,6 @@ export class ServicesComponent implements OnInit {
     });
   }
 
-  // Function to generate an observable that emits values with increasing counts
   getCountObservable(
     start: number,
     end: number,

@@ -115,8 +115,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.equalizerAnimation('.equalizer', 180, this.barsHeight);
       this.initializeOwlCarouselINS();
       const mySwiper: Swiper = new Swiper(this.swiperContainer?.nativeElement, {
-        // Swiper options here
-        // For example:
         slidesPerView: 1,
         spaceBetween: 30,
       });

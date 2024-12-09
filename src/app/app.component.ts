@@ -55,6 +55,7 @@ export class AppComponent implements OnInit, OnDestroy {
           } else {
             this.top = 50;
             this.isSoundOn = false;
+            this.playOSSound();
           }
         }
       });
