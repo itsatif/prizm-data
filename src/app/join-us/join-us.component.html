@@ -1,22 +1,17 @@
 <header class="page-header">
   <div class="inner-bg">
-    <img src="assets/images/contact-us.gif"/>
+    <img src="assets/images/contact-us.gif" />
   </div>
   <div class="container">
     <h1>Join Us</h1>
   </div>
-  <!-- <aside class="left-side">
-    <ul>
-      <li><a href="#">FACEBOOK</a></li>
-      <li><a href="#">INSTAGRAM</a></li>
-      <li><a href="#">YOUTUBE</a></li>
-    </ul>
-  </aside> -->
-  <!-- end left-side -->
-
-  <div class="sound"><span> SOUND </span>
+  <div class="sound">
+    <span> SOUND </span>
     <div class="equalizer">
-      <div class="holder"><span></span> <span></span> <span></span> <span></span><span></span><span></span></div>
+      <div class="holder">
+        <span></span> <span></span> <span></span> <span></span><span></span
+        ><span></span>
+      </div>
     </div>
   </div>
   <!-- end sound -->
@@ -25,57 +20,104 @@
 <div class="register">
   <div class="row d-flex align-items-center">
     <div class="col-md-3 register-left">
-      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+      <!--      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>-->
       <h3>Welcome</h3>
-      <p>It is with great pleasure and enthusiasm that we extend a warm welcome to each of you as valued members of our
-        distinguished Expert Panel on Market Research!</p>
+      <p>
+        It is with great pleasure and enthusiasm that we extend a warm welcome
+        to each of you as valued members of our distinguished Expert Panel on
+        Market Research!
+      </p>
     </div>
     <div class="col-md-9 register-right">
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <h3 class="register-heading" style="font-size: 1.75rem;">Join our movement today!</h3>
+        <div
+          aria-labelledby="home-tab"
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+        >
+          <h3 class="register-heading" style="font-size: 1.75rem">
+            Join our movement today!
+          </h3>
           <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
             <div class="row register-form">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.fname" type="text" class="form-control" placeholder="First Name *"
-                         name="fname" required>
+                  <input
+                    [(ngModel)]="formData.fname"
+                    class="form-control"
+                    name="fname"
+                    placeholder="First Name *"
+                    required
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.lname" type="text" class="form-control" placeholder="Last Name *"
-                         name="lname" required>
+                  <input
+                    [(ngModel)]="formData.lname"
+                    class="form-control"
+                    name="lname"
+                    placeholder="Last Name *"
+                    required
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.companyname" type="text" class="form-control" placeholder="Company Name"
-                         name="companyname">
+                  <input
+                    [(ngModel)]="formData.companyname"
+                    class="form-control"
+                    name="companyname"
+                    placeholder="Company Name"
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.designation" type="text" class="form-control" placeholder="Designation"
-                         name="designation">
+                  <input
+                    [(ngModel)]="formData.designation"
+                    class="form-control"
+                    name="designation"
+                    placeholder="Designation"
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.email" type="email" class="form-control" placeholder="Email *"
-                         name="email" required>
+                  <input
+                    [(ngModel)]="formData.email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Email *"
+                    required
+                    type="email"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.dob" type="date" class="form-control" placeholder="Date of Birth"
-                         name="dob">
+                  <input
+                    [(ngModel)]="formData.dob"
+                    class="form-control"
+                    name="dob"
+                    placeholder="Date of Birth"
+                    type="date"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select [(ngModel)]="formData.gender" class="form-control" name="gender">
-                    <option value="" disabled selected>Gender</option>
+                  <select
+                    [(ngModel)]="formData.gender"
+                    class="form-control"
+                    name="gender"
+                  >
+                    <option disabled selected value="">Gender</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Other">Other</option>
@@ -84,8 +126,12 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select [(ngModel)]="formData.maritalStatus" class="form-control" name="maritalStatus">
-                    <option value="" disabled selected>Marital Status</option>
+                  <select
+                    [(ngModel)]="formData.maritalStatus"
+                    class="form-control"
+                    name="maritalStatus"
+                  >
+                    <option disabled selected value="">Marital Status</option>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Widowed">Widowed</option>
@@ -96,8 +142,12 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <select [(ngModel)]="formData.children" class="form-control" name="children">
-                    <option value="" disabled selected>Children</option>
+                  <select
+                    [(ngModel)]="formData.children"
+                    class="form-control"
+                    name="children"
+                  >
+                    <option disabled selected value="">Children</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -108,26 +158,41 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.currency" type="text" class="form-control" placeholder="Currency"
-                         name="currency">
+                  <input
+                    [(ngModel)]="formData.currency"
+                    class="form-control"
+                    name="currency"
+                    placeholder="Currency"
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.country" type="text" class="form-control" placeholder="Country"
-                         name="country">
+                  <input
+                    [(ngModel)]="formData.country"
+                    class="form-control"
+                    name="country"
+                    placeholder="Country"
+                    type="text"
+                  />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input [(ngModel)]="formData.zip" type="text" class="form-control" placeholder="Zip Code" name="zip">
+                  <input
+                    [(ngModel)]="formData.zip"
+                    class="form-control"
+                    name="zip"
+                    placeholder="Zip Code"
+                    type="text"
+                  />
                 </div>
               </div>
 
-              <input type="submit" class="btnRegister" value="Send"/>
+              <input class="btnRegister" type="submit" value="Send" />
             </div>
           </form>
-
         </div>
       </div>
     </div>
