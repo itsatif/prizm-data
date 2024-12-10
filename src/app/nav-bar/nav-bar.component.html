@@ -37,7 +37,7 @@
             margin-left: auto;
             color: black;
             font-size: 18px;
-            font-family: &quot;Montserrat&quot;;
+            font-family: Montserrat;
           "
         >
           sales&#64;prizmdata.com
@@ -174,6 +174,7 @@
                   border-radius: 0;
                   letter-spacing: 3px;
                   text-align: center;
+                  font-weight: 500;
                 "
                 >JOIN OUR PANEL</a
               >
@@ -193,7 +194,12 @@
     <div>
       <div
         class="nav-right-upper"
-        style="position: absolute; right: 15px; top: 0;width: calc(100dvw - 40px);"
+        style="
+          position: absolute;
+          right: 15px;
+          top: 0;
+          width: calc(100dvw - 40px);
+        "
       >
         <a
           class="nav-link text-dark ms-3"
@@ -218,7 +224,7 @@
             margin-left: auto;
             color: black;
             font-size: 18px;
-            font-family: 'Montserrat',serif;
+            font-family: Montserrat, serif;
           "
         >
           sales&#64;prizmdata.com
@@ -241,7 +247,7 @@
           <mat-icon>menu</mat-icon>
         </button>
         <div *ngIf="toggleSideNav" class="header">
-          <nav class="menu active" style="height: 100dvh;width: 80dvw">
+          <nav class="menu active" style="height: 100dvh; width: 80dvw">
             <div class="menu-mobile-header">
               <button class="menu-mobile-arrow" type="button">
                 <i class="ion ion-ios-arrow-back"
@@ -304,28 +310,46 @@
                   <div class="list-item">
                     <ul>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/quantitative-research"
+                        <a
+                          routerLink="/services/quantitative-research"
+                          style="font-size: 16px !important"
                           >Quantitative Research</a
                         >
                       </li>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/qualitative-research"
+                        <a
+                          routerLink="/services/qualitative-research"
+                          style="font-size: 16px !important"
                           >Qualitative Research</a
                         >
                       </li>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/b2b-research">B2B Research</a>
+                        <a
+                          routerLink="/services/b2b-research"
+                          style="font-size: 16px !important"
+                          >B2B Research</a
+                        >
                       </li>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/industries">Industries</a>
+                        <a
+                          routerLink="/services/industries"
+                          style="font-size: 16px !important"
+                          >Industries</a
+                        >
                       </li>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/bespoke-services"
+                        <a
+                          routerLink="/services/bespoke-services"
+                          style="font-size: 16px !important"
                           >Bespoke Services</a
                         >
                       </li>
                       <li class="menu-item-has-children">
-                        <a routerLink="/services/solutions">Solutions</a>
+                        <a
+                          routerLink="/services/solutions"
+                          style="font-size: 16px !important"
+                          >Solutions</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -378,9 +402,11 @@
             </ul>
           </nav>
         </div>
-        <a class="navbar-brand" routerLink="/" style="position: absolute;
-    left: 50%;
-    transform: translateX(-50%);">
+        <a
+          class="navbar-brand"
+          routerLink="/"
+          style="position: absolute; left: 50%; transform: translateX(-50%)"
+        >
           <img
             alt="PRIZMDATA Logo"
             src="/assets/images/logo.png"

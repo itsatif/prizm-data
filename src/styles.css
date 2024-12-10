@@ -22828,9 +22828,9 @@ h6.counter-title {
   height: 100%;
   width: var(--boxSize);
   background: #870738;
-  animation-duration: 2s;
+  animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   border-radius: 8px;
 }
 
