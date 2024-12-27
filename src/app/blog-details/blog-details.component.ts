@@ -3,6 +3,7 @@ import {ActivatedRoute, Params} from "@angular/router";
 import {Blogs, BlogsService} from "../blogs/blogs.service";
 import {map, Observable, switchMap} from "rxjs";
 import {AsyncPipe, CommonModule, NgForOf, NgIf} from "@angular/common";
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-blog-details',
@@ -11,7 +12,8 @@ import {AsyncPipe, CommonModule, NgForOf, NgIf} from "@angular/common";
     NgIf,
     AsyncPipe,
     NgForOf,
-    CommonModule
+    CommonModule,
+    TranslatePipe
   ],
   templateUrl: './blog-details.component.html',
   styleUrl: './blog-details.component.css'

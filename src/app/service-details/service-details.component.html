@@ -3,7 +3,7 @@
     <img src="assets/images/contact-us.gif"/>
   </div>
   <div class="container">
-    <h1>{{ contentData?.title }}</h1>
+    <h1>{{ contentData?.title | translate }}</h1>
   </div>
   <!-- end sound -->
 </header>
@@ -14,17 +14,17 @@
     <div class="row">
       <div class="col-lg-8 col-md-8">
         <div class="service-details-wrap">
-          <img src="assets/images/{{ contentData?.slug }}.jpg" alt="services" class="img-fluid rounded shadow-sm">
+          <img alt="services" class="img-fluid rounded shadow-sm" src="assets/images/{{ contentData?.slug }}.jpg">
           <div class="services-detail-content mt-4">
-            <h3>{{ contentData.title }}</h3>
-            <p>{{ contentData.description }}</p>
-            <h4>{{ contentData.subheading }}</h4>
+            <h3>{{ contentData.title | translate }}</h3>
+            <p>{{ contentData.description | translate }}</p>
+            <h4>{{ contentData.subheading | translate }}</h4>
             <ng-container *ngIf="contentData?.subDescription">
-              <p>{{ contentData?.subDescription }}</p>
+              <p>{{ contentData?.subDescription | translate }}</p>
             </ng-container>
             <ul class="list-unstyled tech-feature-list">
-              <li class="py-1" *ngFor="let item of contentData.listItems">
-                <i aria-hidden="true" class="fa fa-check-square"></i>{{ item }}
+              <li *ngFor="let item of contentData.listItems" class="py-1">
+                <i aria-hidden="true" class="fa fa-check-square"></i>{{ item | translate }}
               </li>
             </ul>
           </div>
@@ -37,15 +37,15 @@
           <!--all services list-->
           <aside class="widget widget-categories">
             <div class="widget-title">
-              <h5>All Services</h5>
+              <h5>{{ 'All Services' | translate }}</h5>
             </div>
             <ul class="all-service-list">
-              <li><a href="/services/quantitative-research">Quantitative Research</a></li>
-              <li><a href="/services/qualitative-research">Qualitative Research</a></li>
-              <li><a href="/services/b2b-research">B2B Research</a></li>
-              <li><a href="/services/industries">Industries</a></li>
-              <li><a href="/services/bespoke-services">Bespoke Services</a></li>
-              <li><a href="/services/solutions">Solutions</a></li>
+              <li><a href="/services/quantitative-research">{{ 'Quantitative Research' | translate }}</a></li>
+              <li><a href="/services/qualitative-research">{{ 'Qualitative Research' | translate }}</a></li>
+              <li><a href="/services/b2b-research">{{ 'B2B Research' | translate }}</a></li>
+              <li><a href="/services/industries">{{ 'Industries' | translate }}</a></li>
+              <li><a href="/services/bespoke-services">{{ 'Bespoke Services' | translate }}</a></li>
+              <li><a href="/services/solutions">{{ 'Solutions'  | translate }}</a></li>
             </ul>
           </aside>
 

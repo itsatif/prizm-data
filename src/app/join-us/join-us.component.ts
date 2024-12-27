@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { ServiceService } from '../services/service.service';
-import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { FormService } from '../sharedServices/form.service';
+import {Component} from '@angular/core';
+import {ServiceService} from '../services/service.service';
+import {FormsModule, NgForm, ReactiveFormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {Router} from '@angular/router';
+import {FormService} from '../sharedServices/form.service';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-join-us',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, TranslatePipe],
   templateUrl: './join-us.component.html',
   styleUrl: './join-us.component.css',
 })
@@ -29,7 +30,8 @@ export class JoinUsComponent {
     private service: ServiceService,
     private router: Router,
     private formService: FormService,
-  ) {}
+  ) {
+  }
 
   submitForm(form: NgForm): void {
     if (form.valid) {

@@ -63,6 +63,25 @@
   display: none;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-left: 35px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  direction: ltr !important;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
 @media (max-width: 480px) {
   .mob-cont {
     display: block;

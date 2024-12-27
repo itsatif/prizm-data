@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { interval, Observable, scan, takeWhile } from 'rxjs';
-import { RouterLink } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {interval, Observable, scan, takeWhile} from 'rxjs';
+import {RouterLink} from '@angular/router';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css',
 })

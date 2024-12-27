@@ -1,16 +1,16 @@
 <header class="page-header">
   <div class="inner-bg">
-    <img src="assets/images/contact-us.gif" />
+    <img src="assets/images/contact-us.gif"/>
   </div>
   <div class="container">
-    <h1>Join Us</h1>
+    <h1>{{ 'Join Us' | translate }}</h1>
   </div>
   <div class="sound">
     <span> SOUND </span>
     <div class="equalizer">
       <div class="holder">
         <span></span> <span></span> <span></span> <span></span><span></span
-        ><span></span>
+      ><span></span>
       </div>
     </div>
   </div>
@@ -21,12 +21,9 @@
   <div class="row d-flex align-items-center">
     <div class="col-md-3 register-left">
       <!--      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>-->
-      <h3>Welcome</h3>
+      <h3>{{ 'Welcome' | translate }}</h3>
       <p>
-        It is with great pleasure and enthusiasm that we extend a warm welcome
-        to each of you as valued members of our distinguished Expert Panel on
-        Market Research!
-      </p>
+        {{ 'It is with great pleasure and enthusiasm that we extend a warm welcome to each of you as valued members of our distinguished Expert Panel on Market Research!' | translate }} </p>
     </div>
     <div class="col-md-9 register-right">
       <div class="tab-content" id="myTabContent">
@@ -37,7 +34,7 @@
           role="tabpanel"
         >
           <h3 class="register-heading" style="font-size: 1.75rem">
-            Join our movement today!
+            {{ 'Join our movement today!' | translate }}
           </h3>
           <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
             <div class="row register-form">
@@ -190,7 +187,7 @@
                 </div>
               </div>
 
-              <input class="btnRegister" type="submit" value="Send" />
+              <input class="btnRegister" type="submit" value="Send"/>
             </div>
           </form>
         </div>

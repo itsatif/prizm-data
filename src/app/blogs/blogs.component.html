@@ -1,9 +1,9 @@
 <header class="page-header">
   <div class="inner-bg">
-    <img src="assets/images/contact-us.gif" alt="Image">
+    <img alt="Image" src="assets/images/contact-us.gif">
   </div>
   <div class="container">
-    <h1>Latest Blog</h1>
+    <h1>{{ 'Latest Blog' | translate }}</h1>
   </div>
 </header>
 <ng-container *ngIf="blogs$ | async as blogsData">
@@ -11,21 +11,21 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="post wow bounceInLeft" *ngFor="let blog of blogsData">
+          <div *ngFor="let blog of blogsData" class="post wow bounceInLeft">
             <figure class="post-image">
               <img [src]="blog.imageUrl" alt="Image">
             </figure>
             <div class="post-content">
               <div class="inner">
                 <small class="post-date">{{ blog.date }}</small>
-                <h3 class="post-title"><a [href]="'/blogs/' + blog.slug">{{ blog.title }}</a></h3>
-                <p class="post-text">{{ blog.content[0].text }}</p>
+                <h3 class="post-title"><a [href]="'/blogs/' + blog.slug">{{ blog.title | translate }}</a></h3>
+                <p class="post-text">{{ blog.content[0].text  | translate }}</p>
                 <div class="custom-link wow fadeIn">
                   <a [href]="'/blogs/' + blog.slug">
                     <div class="lines">
                       <span></span> <span></span>
                     </div>
-                    <b>READ MORE</b>
+                    <b>{{ 'Read More' | translate }}</b>
                   </a>
                 </div>
               </div>

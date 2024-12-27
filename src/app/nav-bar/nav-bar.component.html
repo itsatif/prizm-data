@@ -9,7 +9,7 @@
   >
     <div class="nav-left">
       <a class="navbar-brand" routerLink="/">
-        <img alt="Logo" src="assets/images/logo.png" />
+        <img alt="Logo" src="assets/images/logo.png"/>
       </a>
     </div>
     <div class="nav-right">
@@ -42,6 +42,22 @@
         >
           sales&#64;prizmdata.com
         </a>
+        <div style="margin-left: 10px">
+          <div style="position: relative; display: inline-block; width: 200px;">
+            <i class="fas fa-globe"
+               style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #555;"></i>
+            <select (change)="changeLanguage($event.target)"
+                    [value]="selectedLanguage"
+                    style="padding-left: 35px; width: 100%;max-width: 135px; font-size: 14px; height: 30px; border-radius: 5px; border: 1px solid #ccc;">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="de">German</option>
+              <option value="fr">French</option>
+              <option value="ar">Arabic</option>
+            </select>
+          </div>
+
+        </div>
       </div>
       <div class="nav-right-downer">
         <button
@@ -58,11 +74,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto" style="gap: 30px">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/">HOME</a>
+              <a class="nav-link" routerLink="/">{{ 'HOME' | translate }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/client-we-serve"
-                >CLIENTS WE SERVE</a
+              >{{ 'CLIENTS WE SERVE' | translate }}</a
               >
             </li>
             <li class="nav-item dropdown">
@@ -74,49 +90,49 @@
                 role="button"
                 routerLink="/services"
               >
-                OUR SERVICES
+                {{ 'OUR SERVICES' | translate }}
               </a>
               <ul aria-labelledby="ourServicesDropDown" class="dropdown-menu">
                 <li>
                   <a
                     class="dropdown-item"
                     routerLink="/services/quantitative-research"
-                    >Quantitative Research</a
+                  >{{ 'QUANTITATIVE RESEARCH' | translate }}</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     routerLink="/services/qualitative-research"
-                    >Qualitative Research</a
+                  >{{ 'QUALITATIVE RESEARCH' | translate }}</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" routerLink="/services/b2b-research"
-                    >B2B Research</a
+                  >{{ 'B2B RESEARCH' | translate }}</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" routerLink="/services/industries"
-                    >Industries</a
+                  >{{ 'INDUSTRIES' | translate }}</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item"
                     routerLink="/services/bespoke-services"
-                    >Bespoke Services</a
+                  >{{ 'BESPOKE SERVICES' | translate }}</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" routerLink="/services/solutions"
-                    >Solutions</a
+                  >{{ 'SOLUTIONS' | translate }}</a
                   >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/about-us">ABOUT US</a>
+              <a class="nav-link" routerLink="/about-us">{{ 'ABOUT US' | translate }}</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -127,29 +143,29 @@
                 id="resourceCenterDropdown"
                 role="button"
               >
-                RESOURCE CENTER
+                {{ 'RESOURCE CENTER' | translate }}
               </a>
               <ul
                 aria-labelledby="resourceCenterDropdown"
                 class="dropdown-menu"
               >
                 <li>
-                  <a class="dropdown-item" routerLink="/blogs">Blog Insights</a>
+                  <a class="dropdown-item" routerLink="/blogs">{{ 'Blog Insights' | translate }}</a>
                 </li>
                 <li>
                   <a class="dropdown-item" routerLink="/upcoming-events"
-                    >Upcoming Events</a
+                  >{{ 'Upcoming Events' | translate }}</a
                   >
                 </li>
                 <li>
                   <a class="dropdown-item" routerLink="/downloads"
-                    >Downloadable (Reports)</a
+                  >{{ 'Downloadable (Reports)' | translate }}</a
                   >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/contact-us">CONTACT US</a>
+              <a class="nav-link" routerLink="/contact-us">{{ 'CONTACT US' | translate }}</a>
             </li>
             <li class="nav-item">
               <a
@@ -176,7 +192,7 @@
                   text-align: center;
                   font-weight: 500;
                 "
-                >JOIN OUR PANEL</a
+              >{{ 'JOIN OUR PANEL' | translate }}</a
               >
             </li>
           </ul>
@@ -251,11 +267,11 @@
             <div class="menu-mobile-header">
               <button class="menu-mobile-arrow" type="button">
                 <i class="ion ion-ios-arrow-back"
-                  ><img
-                    alt="back-arrow"
-                    height="47px"
-                    src="/assets/images/back-arrow.png"
-                    width="130px"
+                ><img
+                  alt="back-arrow"
+                  height="47px"
+                  src="/assets/images/back-arrow.png"
+                  width="130px"
                 /></i>
               </button>
               <div class="menu-mobile-title"></div>
@@ -283,25 +299,25 @@
                 <a class="dg-show-desktop">
                   <span routerLink="/services">Our Services </span
                   ><i class="ion ion-ios-arrow-down"
-                    ><img
-                      (click)="toggleServices = !toggleServices"
-                      alt="right-arrow"
-                      height="47px"
-                      src="/assets/images/right-arrow.png"
-                      width="130px" /></i
+                ><img
+                  (click)="toggleServices = !toggleServices"
+                  alt="right-arrow"
+                  height="47px"
+                  src="/assets/images/right-arrow.png"
+                  width="130px"/></i
                 ></a>
                 <a class="dg-show-mobile" href="#">
                   <span routerLink="/services">Our Services </span
                   ><i class="ion ion-ios-arrow-down"
-                    ><img
-                      (click)="
+                ><img
+                  (click)="
                         $event.stopPropagation();
                         toggleServices = !toggleServices
                       "
-                      alt="right-arrow"
-                      height="47px"
-                      src="/assets/images/right-arrow.png"
-                      width="130px" /></i
+                  alt="right-arrow"
+                  height="47px"
+                  src="/assets/images/right-arrow.png"
+                  width="130px"/></i
                 ></a>
                 <div
                   [class.active]="toggleServices"
@@ -313,42 +329,42 @@
                         <a
                           routerLink="/services/quantitative-research"
                           style="font-size: 16px !important"
-                          >Quantitative Research</a
+                        >Quantitative Research</a
                         >
                       </li>
                       <li class="menu-item-has-children">
                         <a
                           routerLink="/services/qualitative-research"
                           style="font-size: 16px !important"
-                          >Qualitative Research</a
+                        >Qualitative Research</a
                         >
                       </li>
                       <li class="menu-item-has-children">
                         <a
                           routerLink="/services/b2b-research"
                           style="font-size: 16px !important"
-                          >B2B Research</a
+                        >B2B Research</a
                         >
                       </li>
                       <li class="menu-item-has-children">
                         <a
                           routerLink="/services/industries"
                           style="font-size: 16px !important"
-                          >Industries</a
+                        >Industries</a
                         >
                       </li>
                       <li class="menu-item-has-children">
                         <a
                           routerLink="/services/bespoke-services"
                           style="font-size: 16px !important"
-                          >Bespoke Services</a
+                        >Bespoke Services</a
                         >
                       </li>
                       <li class="menu-item-has-children">
                         <a
                           routerLink="/services/solutions"
                           style="font-size: 16px !important"
-                          >Solutions</a
+                        >Solutions</a
                         >
                       </li>
                     </ul>
@@ -359,22 +375,22 @@
               <li><a href="/career">Careers</a></li>
               <li class="menu-item-has-children">
                 <a class="dg-show-desktop" href="#"
-                  >Resource Center<i class="ion ion-ios-arrow-down"
-                    ><img
-                      (click)="toggleResources = !toggleResources"
-                      alt="right-arrow"
-                      height="47px"
-                      src="/assets/images/right-arrow.png"
-                      width="130px" /></i
+                >Resource Center<i class="ion ion-ios-arrow-down"
+                ><img
+                  (click)="toggleResources = !toggleResources"
+                  alt="right-arrow"
+                  height="47px"
+                  src="/assets/images/right-arrow.png"
+                  width="130px"/></i
                 ></a>
                 <a class="dg-show-mobile" href="#"
-                  >Resource Center<i class="ion ion-ios-arrow-down"
-                    ><img
-                      (click)="toggleResources = !toggleResources"
-                      alt="right-arrow"
-                      height="47px"
-                      src="/assets/images/right-arrow.png"
-                      width="130px" /></i
+                >Resource Center<i class="ion ion-ios-arrow-down"
+                ><img
+                  (click)="toggleResources = !toggleResources"
+                  alt="right-arrow"
+                  height="47px"
+                  src="/assets/images/right-arrow.png"
+                  width="130px"/></i
                 ></a>
                 <div
                   [class.active]="toggleResources"

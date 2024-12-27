@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslatePipe
+  ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })

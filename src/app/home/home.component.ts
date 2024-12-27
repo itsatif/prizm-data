@@ -9,33 +9,16 @@ import {
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import {
-  AsyncPipe,
-  CommonModule,
-  isPlatformBrowser,
-  NgForOf,
-  NgIf,
-} from '@angular/common';
-import { Blogs, BlogsService } from '../blogs/blogs.service';
-import { Observable } from 'rxjs';
+import {CommonModule, isPlatformBrowser, NgIf,} from '@angular/common';
+import {Blogs, BlogsService} from '../blogs/blogs.service';
+import {Observable} from 'rxjs';
 import Swiper from 'swiper';
-import {
-  MatSnackBar,
-  MatSnackBarConfig,
-  MatSnackBarModule,
-} from '@angular/material/snack-bar';
-import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { MatButton } from '@angular/material/button';
-import { Router, RouterLink } from '@angular/router';
-import { FormService } from '../sharedServices/form.service';
-import {
-  animate,
-  query,
-  stagger,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
+import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule,} from '@angular/material/snack-bar';
+import {FormsModule, NgForm, ReactiveFormsModule} from '@angular/forms';
+import {Router, RouterLink} from '@angular/router';
+import {FormService} from '../sharedServices/form.service';
+import {animate, query, stagger, style, transition, trigger,} from '@angular/animations';
+import {TranslatePipe} from "@ngx-translate/core";
 
 declare var $: any;
 
@@ -43,15 +26,13 @@ declare var $: any;
   selector: 'app-home',
   standalone: true,
   imports: [
-    NgForOf,
     NgIf,
-    AsyncPipe,
     ReactiveFormsModule,
     MatSnackBarModule,
     FormsModule,
     CommonModule,
-    MatButton,
     RouterLink,
+    TranslatePipe,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
@@ -59,11 +40,11 @@ declare var $: any;
     trigger('fadeInUp', [
       transition(':enter', [
         query('.counter-block', [
-          style({ opacity: 0, transform: 'translateY(20px)' }),
+          style({opacity: 0, transform: 'translateY(20px)'}),
           stagger(300, [
             animate(
               '2s ease-out',
-              style({ opacity: 1, transform: 'translateY(0)' }),
+              style({opacity: 1, transform: 'translateY(0)'}),
             ),
           ]),
         ]),
@@ -92,7 +73,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   interval: any;
   duration: number = 5000;
   right: number = 1000;
-  @ViewChild('swiper', { static: false }) swiperContainer: ElementRef;
+  @ViewChild('swiper', {static: false}) swiperContainer: ElementRef;
   counterIndex: any = [];
 
   constructor(
@@ -103,7 +84,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     private el: ElementRef,
     private router: Router,
     private formService: FormService,
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.blogs$ = this.blogsService.blogs$;
