@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {CommonModule, isPlatformBrowser} from '@angular/common';
 import {NavigationEnd, Router, RouterLink} from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -18,8 +18,8 @@ export class NavBarComponent implements OnInit {
   toggleResources: boolean = false;
   selectedLanguage: string = 'en';
 
-  constructor(private router: Router, private translate: TranslateService) {
-    if (typeof window !== 'undefined' && localStorage.getItem('lang')) {
+  constructor(private router: Router, private translate: TranslateService, @Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId) && localStorage.getItem('lang')) {
       this.translate.setDefaultLang(localStorage.getItem('lang'));
       document.dir = localStorage.getItem('lang') === 'ar' ? 'rtl' : 'ltr';
       this.selectedLanguage = localStorage.getItem('lang');
@@ -40,7 +40,9 @@ export class NavBarComponent implements OnInit {
   changeLanguage(lang: any) {
     console.log(lang.value);
     this.translate.use(lang.value);
-    localStorage.setItem('lang', lang.value);
-    document.dir = lang.value === 'ar' ? 'rtl' : 'ltr';
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('lang', lang.value);
+      document.dir = lang.value === 'ar' ? 'rtl' : 'ltr';
+    }
   }
 }

@@ -8,8 +8,18 @@ import {provideClientHydration} from '@angular/platform-browser';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 
 export function initializeTranslation(translate: TranslateService, lang: string) {
-  return () => translate.use(lang).toPromise();
+  return async () => {
+    try {
+      await Promise.race([
+        translate.use(lang).toPromise(),
+        new Promise((_, reject) => setTimeout(() => reject('Timeout'), 5000)), // 5s timeout
+      ]);
+    } catch (error) {
+      console.warn(`Translation initialization failed: ${error}`);
+    }
+  };
 }
+
 
 export const appConfig: ApplicationConfig = {
   providers: [

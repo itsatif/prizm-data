@@ -25,7 +25,6 @@ export function app(): express.Express {
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {
     const lang = req.headers['accept-language']?.split(',')[0] || 'en';
-    console.log(`Detected language: ${lang}`);
 
     const {protocol, originalUrl, baseUrl, headers} = req;
 
