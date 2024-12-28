@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { ServiceService } from '../services/service.service';
-import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { FormService } from '../sharedServices/form.service';
+import {Component} from '@angular/core';
+import {ServiceService} from '../services/service.service';
+import {FormsModule, NgForm, ReactiveFormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {Router} from '@angular/router';
+import {FormService} from '../sharedServices/form.service';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, CommonModule, TranslatePipe],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css',
 })
@@ -24,7 +25,8 @@ export class ContactUsComponent {
     private service: ServiceService,
     private router: Router,
     private formService: FormService,
-  ) {}
+  ) {
+  }
 
   submitForm(form: NgForm): void {
     if (form.valid) {
