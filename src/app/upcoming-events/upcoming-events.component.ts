@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from "@angular/common";
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-upcoming-events',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './upcoming-events.component.html',
   styleUrl: './upcoming-events.component.css'
 })
