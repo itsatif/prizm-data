@@ -3,7 +3,7 @@
     <img src="assets/images/contact-us.gif"/>
   </div>
   <div class="container">
-    <h1>Downloadables</h1>
+    <h1>{{ 'Downloadables' | translate }}</h1>
   </div>
   <!-- <aside class="left-side">
     <ul>
@@ -21,8 +21,8 @@
   <div class="container">
     <div class="row justify-content-center">
       <ng-container *ngIf="downloadItems.length > 0; else noDataMessage">
-        <div class="col-lg-4 col-md-4 wow fadeIn" *ngFor="let item of downloadItems; let i = index"
-             [style.visibility]="'visible'" [style.animationName]="'fadeIn'" [style.animationDelay]="i * 0.05 + 's'">
+        <div *ngFor="let item of downloadItems; let i = index" [style.animationDelay]="i * 0.05 + 's'"
+             [style.animationName]="'fadeIn'" [style.visibility]="'visible'" class="col-lg-4 col-md-4 wow fadeIn">
           <figure>
             <img [src]="item.imageUrl" alt="Image">
             <figcaption>
@@ -35,7 +35,7 @@
         </div>
       </ng-container>
       <ng-template #noDataMessage>
-        <h3>We will shortly upload the data for downloading.</h3>
+        <h3>{{ 'We will shortly upload the data for downloading.' | translate }}</h3>
       </ng-template>
       <!-- end col-4 -->
     </div>

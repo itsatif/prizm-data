@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import {Component} from '@angular/core';
+import {CommonModule, NgIf} from '@angular/common';
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-download',
   standalone: true,
-  imports: [NgIf, CommonModule],
+  imports: [NgIf, CommonModule, TranslatePipe],
   templateUrl: './download.component.html',
   styleUrl: './download.component.css',
 })
