@@ -174,13 +174,9 @@
       class="col-12 wow fadeIn"
       style="visibility: visible; animation-name: fadeIn"
     >
-      <h6>{{ 'BUSINESS TARGET' | translate }}</h6>
-      <h2>{{ 'Target your Market with Confidence'  | translate }}</h2>
-      <p>
-        {{
-          'Your business is in a persistent battle for your clients’ recognition whether you know it or not.'  | translate
-        }}
-      </p>
+      <h6>{{ 'BUSINESS_TARGET' | translate }}</h6>
+      <h2>{{ 'Target your Market with Confidence' | translate }}</h2>
+      <p>{{ 'Your business is in a persistent battle for your clients’ recognition whether you know it or not.' | translate }}</p>
     </div>
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-3 wow flipInX" data-wow-delay="0s">
@@ -190,8 +186,7 @@
             <span class="number-bg">01</span>
           </div>
           <div class="promo-info">
-            <p>
-              {{ 'Constantly Focus on Quality & Quantity Add images, text and links, or connect data from your collection.'  | translate }} </p>
+            <p>{{ 'Constantly Focus on Quality & Quantity Add images, text and links, or connect data from your collection.' | translate }}</p>
           </div>
         </div>
       </div>
@@ -202,10 +197,7 @@
             <span class="number-bg">02</span>
           </div>
           <div class="promo-info">
-            <p>
-              {{ 'Provide Excellence' | translate }}<br/>
-              {{ 'Result' | translate }}
-            </p>
+            <p>{{ 'Provide Excellence' | translate }}<br/>{{ 'Result' | translate }}</p>
           </div>
         </div>
       </div>
@@ -216,7 +208,7 @@
             <span class="number-bg">03</span>
           </div>
           <div class="promo-info">
-            <p>Cognisant & Cohesive market goal</p>
+            <p>{{ 'Cognisant & Cohesive market goal' | translate }}</p>
           </div>
         </div>
       </div>
@@ -227,7 +219,7 @@
             <span class="number-bg">04</span>
           </div>
           <div class="promo-info">
-            <p>Cultivate Long-Term Relationships with our clients</p>
+            <p>{{ 'Cultivate Long-Term Relationships with our clients' | translate }}</p>
           </div>
         </div>
       </div>
@@ -241,13 +233,9 @@
       class="col-12 wow fadeIn"
       style="visibility: visible; animation-name: fadeIn"
     >
-      <h6>FASTEST-GROWING RESEARCH AND ANALYTICS</h6>
-      <h2 class="main-sec-hd">Why Choose Us</h2>
-      <p>
-        Our B2B and Consumer respondent data meets the highest standards for
-        both our Market Research industry and corporate clients. Here are some
-        Annual figures about Market Research Panel.
-      </p>
+      <h6>{{ 'FASTEST-GROWING RESEARCH AND ANALYTICS' | translate }}</h6>
+      <h2 class="main-sec-hd">{{ 'Why Choose Us' | translate }}</h2>
+      <p>{{ 'Our B2B and Consumer respondent data meets the highest standards for both our Market Research industry and corporate clients. Here are some Annual figures about Market Research Panel.' | translate }}</p>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -255,111 +243,61 @@
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-user"></i>
-              <h3>CLIENTS</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="700"
-                  data-count-start="0"
-                  data-speed="60"
-                ></span
-                >{{ counters?.["CLIENTS"] }}K+
-              </p>
+              <h3>{{ 'CLIENTS' | translate }}</h3>
+              <p><span class="counter" data-count-end="700" data-count-start="0"
+                       data-speed="60"></span>{{ counters?.["CLIENTS"] }}K+</p>
             </div>
           </div>
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-check"></i>
-              <h3>PROJECTS</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="7"
-                  data-count-start="0"
-                  data-speed="90"
-                ></span
-                >{{ counters?.["PROJECTS"] }}K+
-              </p>
+              <h3>{{ 'PROJECTS' | translate }}</h3>
+              <p><span class="counter" data-count-end="7" data-count-start="0"
+                       data-speed="90"></span>{{ counters?.["PROJECTS"] }}K+</p>
             </div>
           </div>
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-globe"></i>
-              <h3>COUNTRIES</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="35"
-                  data-count-start="0"
-                  data-speed="90"
-                ></span
-                >{{ counters?.["COUNTRIES"] }}
-              </p>
+              <h3>{{ 'COUNTRIES' | translate }}</h3>
+              <p><span class="counter" data-count-end="35" data-count-start="0"
+                       data-speed="90"></span>{{ counters?.["COUNTRIES"] }}</p>
             </div>
           </div>
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-poll"></i>
-              <h3>SURVEY RUNS</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="13"
-                  data-count-start="0"
-                  data-speed="90"
-                ></span
-                >{{ counters?.["SURVEY_RUNS"] }}K+
-              </p>
+              <h3>{{ 'SURVEY RUNS' | translate }}</h3>
+              <p><span class="counter" data-count-end="13" data-count-start="0"
+                       data-speed="90"></span>{{ counters?.["SURVEY_RUNS"] }}K+</p>
             </div>
           </div>
         </div>
       </div>
-
       <div class="col-md-6">
         <div class="coun-bg">
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-poll"></i>
-              <h3>B2B SURVEYS</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="4"
-                  data-count-start="0"
-                  data-speed="90"
-                ></span
-                >{{ counters?.["B2B_SURVEYS"] }}K+
-              </p>
+              <h3>{{ 'B2B SURVEYS' | translate }}</h3>
+              <p><span class="counter" data-count-end="4" data-count-start="0"
+                       data-speed="90"></span>{{ counters?.["B2B_SURVEYS"] }}K+</p>
             </div>
           </div>
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-user-plus"></i>
-              <h3>TOTAL RESPONDENTS</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="8"
-                  data-count-start="0"
-                  data-speed="90"
-                ></span
-                >{{ counters?.["TOTAL_RESPONDENTS"] }}M
-              </p>
+              <h3>{{ 'TOTAL RESPONDENTS' | translate }}</h3>
+              <p><span class="counter" data-count-end="8" data-count-start="0"
+                       data-speed="90"></span>{{ counters?.["TOTAL_RESPONDENTS"] }}M</p>
             </div>
           </div>
           <div class="col-6">
             <div class="tiles-box">
               <i aria-hidden="true" class="fa fa-check"></i>
-              <h3>SURVEYS COMPLETED</h3>
-              <p>
-                <span
-                  class="counter"
-                  data-count-end="600"
-                  data-count-start="0"
-                  data-speed="70"
-                ></span
-                >{{ counters?.["SURVEYS_COMPLETED"] }}K+
-              </p>
+              <h3>{{ 'SURVEYS COMPLETED' | translate }}</h3>
+              <p><span class="counter" data-count-end="600" data-count-start="0"
+                       data-speed="70"></span>{{ counters?.["SURVEYS_COMPLETED"] }}K+</p>
             </div>
           </div>
         </div>
