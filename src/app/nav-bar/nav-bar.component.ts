@@ -37,8 +37,9 @@ export class NavBarComponent implements OnInit {
     });
   }
 
-  changeLanguage(lang: any) {
+  changeLanguage(lang: any): void {
     console.log(lang.value);
+    this.selectedLanguage = lang.value;
     this.translate.use(lang.value);
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('lang', lang.value);
