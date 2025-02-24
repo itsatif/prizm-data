@@ -23305,6 +23305,7 @@ a.audiobtn span {
     width: 10px !important;
     background: #860738;
     border-radius: 100%;
+    padding: 0 !important;
     opacity: 0.5;
   }
 
